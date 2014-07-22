@@ -62,9 +62,11 @@ body{
 	margin:0 auto;
 	cursor:default;
 	width:500px;}
+#corpo #direita span{
+	cursor:default;
+	font-size:14pt;}
 #direita img{
-	border-radius:10px;
-	margin-bottom:10px;}/* Fim do Corpo */
+	border-radius:10px;}/* Fim do Corpo */
 /* Rodapé */
 #rodape{
 	margin-top:50px;
