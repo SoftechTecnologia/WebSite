@@ -36,7 +36,7 @@
 			</script>
 		<![endif]-->
 	</head><!-- Head -->
-	<body onload="prompt('O site está em fase de desenvolvimento. Caso queira entrar em contato para consulta dos serviços, favor, envie um e-mail. Desculpe o transtorno. Atenciosamente, Softech.','softechtecnologia@gmail.com')">
+	<body>
 		<div id="topo">
 			<div id="bg-logo-softech">
 				<a href="/" id="logo-softech" title="Início">
@@ -55,20 +55,55 @@
 		</div><!-- Topo -->
 		<div id="corpo" style="width:100%;">
 			<div id="esquerda" align="center">
-				<iframe id="fb" src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fsoftechtecnology&amp;width=300&amp;height=427&amp;colorscheme=light&amp;show_faces=false&amp;header=true&amp;stream=true&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100%px; height:427px;" allowTransparency="true" alt="fb.com/softechtecnology"></iframe>
+				<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fsoftechtecnology&amp;width=300&amp;height=427&amp;colorscheme=light&amp;show_faces=false&amp;header=true&amp;stream=true&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100%px; height:427px;" allowTransparency="true" alt="fb.com/softechtecnology"></iframe>
 			</div>
-			<div id="meio">&nbsp;</div>
+			<div id="meio" align="center">
+				<fieldset id="texto" style="margin-bottom:30px;">
+					<p><span style="padding-left:45px;">Contate-nos</span> para saber mais sobre o nosso serviço, solicitar
+					orçamentos, informações sobre contratos de manutenção, etc, nas formas de contato abaixo:</p>
+					<ul>
+						<li>Telefone móvel 1:<br>(85) 8562-3662 - Operadora "Oi"</li>
+						<li>Telefone móvel 2:<br>(85) 9947-2102 - Operadora "Tim"</li>
+						<li>Endereço (temporário):<br><a href="http://goo.gl/yfC7T5" target="_blank" title="Clique aqui e veja no mapa" class="linkintext">Rua Fagundes Varela, 817, Casa 7</a></li>
+					</ul>
+					<p><span style="padding-left:45px;">Contate-nos</span>, também, pelo chat on-line, localizado no canto
+					superior direito do seu monitor. Caso estejamos off-line, ou queira um atendimento registrado, preencha
+					o formulário abaixo com sua solicitação, dúvida ou sugestão, que faremos o possível para retornar um contato
+					o mais breve possível.</p>
+				</fieldset>
+				<fieldset id="texto">
+					<h3>Formulário de Contato por E-mail</h3>
+					<form method="POST" action="sendmail.php">
+						<label>Nome:</label><br>
+						<input type="text" name="name" id="name" class="field" maxlength="20" required autocomplete="off"/><br>
+						<label>E-mail:</label><br>
+						<input type="text" name="email" id="email" class="field" maxlength="100" required autocomplete="off"/><br>
+						<label>Assunto:</label><br>
+						<select name="subject" id="subject">
+							<option value="D&uacute;vida">Dúvida</option>
+							<option value="Or&ccedil;amento">Orçamento</option>
+							<option value="Sugest&atilde;o">Sugestão</option>
+						</select><br>
+						<label>Mensagem</label><br>
+						<textarea cols="52" rows="5" name="message" id="message" placeholder="Digite sua mensagem aqui." required autocomplete="off"></textarea><br>
+						<span id="entrelinha">Todos os campos são obrigatórios.</span><br>
+						<input type="submit" name="button-sender" id="button-sender" value="Enviar E-mail"/>
+					</form>
+				</fieldset>
+			</div>
 			<div id="direita" align="center">
-				<span>Conheça os nossos serviços!<br>Clique nas imagens e leia mais.</span>
-				<section class="slider">
-					<div class="flexslider">
-						<ul class="slides">
-							<li><a href="hd-recovery.html" title="Recuperação de dados"><img src="img/repairpc/(1).jpg" /></a></li>
-							<li><a href="full-clean.html" title="Limpeza de Hardware"><img src="img/repairpc/(2).jpg" /></a></li>
-							<li><a href="hardware-recovery.html" title="Recuperação de Hardware"><img src="img/repairpc/(3).jpg" /></a></li>
-						</ul>
-					</div>
-				</section>
+				<div id="services-caroussel">
+					<span>Conheça os nossos serviços!<br>Clique nas imagens e leia mais.</span>
+					<section class="slider">
+						<div class="flexslider">
+							<ul class="slides">
+								<li><a href="hd-recovery.html" title="Recuperação de dados"><img src="img/repairpc/(1).jpg" /></a></li>
+								<li><a href="full-clean.html" title="Limpeza de Hardware"><img src="img/repairpc/(2).jpg" /></a></li>
+								<li><a href="hardware-recovery.html" title="Recuperação de Hardware"><img src="img/repairpc/(3).jpg" /></a></li>
+							</ul>
+						</div>
+					</section>
+				</div>
 			</div>
 		</div><!-- Corpo -->
 		<div id="rodape">

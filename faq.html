@@ -3,9 +3,11 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" href="css/css-desktop.css" />
+		<link rel="stylesheet" href="css/flexslider.css" />
 		<link rel="shortcut icon" href="img/icon.ico" />
 		<title>Perguntas Frequentes - Softech - Tecnologia</title>
 		<script src="js/jquery.js"></script>
+		<script defer src="js/jquery.flexslider.js"></script>
 		<script src="js/js.js"></script>
 		<!-- Início do Chat Online -->
 		<script data-cfasync="false">
@@ -34,7 +36,7 @@
 			</script>
 		<![endif]-->
 	</head><!-- Head -->
-	<body onload="prompt('O site está em fase de desenvolvimento. Caso queira entrar em contato para consulta dos serviços, favor, envie um e-mail. Desculpe o transtorno. Atenciosamente, Softech.','softechtecnologia@gmail.com')">
+	<body onload="prompt('Ainda estamos coletando e consolidado as informações para postá-las aqui. Caso queira tirar alguma dúvida, acesse o chat on-line ou <a href='contato.html'>clique aqui</a> para nos contatar, teremos prazer em lhe ajudar. Desculpe-nos pelo transtorno. Atenciosamente, Softech.','softechtecnologia@gmail.com')">
 		<div id="topo">
 			<div id="bg-logo-softech">
 				<a href="/" id="logo-softech" title="Início">
@@ -57,16 +59,18 @@
 			</div>
 			<div id="meio">&nbsp;</div>
 			<div id="direita" align="center">
-				<span>Conheça os nossos serviços!<br>Clique nas imagens e leia mais.</span>
-				<section class="slider">
-					<div class="flexslider">
-						<ul class="slides">
-							<li><a href="hd-recovery.html" title="Recuperação de dados"><img src="img/repairpc/(1).jpg" /></a></li>
-							<li><a href="full-clean.html" title="Limpeza de Hardware"><img src="img/repairpc/(2).jpg" /></a></li>
-							<li><a href="hardware-recovery.html" title="Recuperação de Hardware"><img src="img/repairpc/(3).jpg" /></a></li>
-						</ul>
-					</div>
-				</section>
+				<div id="services-caroussel">
+					<span>Conheça os nossos serviços!<br>Clique nas imagens e leia mais.</span>
+					<section class="slider">
+						<div class="flexslider">
+							<ul class="slides">
+								<li><a href="hd-recovery.html" title="Recuperação de dados"><img src="img/repairpc/(1).jpg" /></a></li>
+								<li><a href="full-clean.html" title="Limpeza de Hardware"><img src="img/repairpc/(2).jpg" /></a></li>
+								<li><a href="hardware-recovery.html" title="Recuperação de Hardware"><img src="img/repairpc/(3).jpg" /></a></li>
+							</ul>
+						</div>
+					</section>
+				</div>
 			</div>
 		</div><!-- Corpo -->
 		<div id="rodape">
