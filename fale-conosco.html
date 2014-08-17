@@ -2,10 +2,10 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" href="css/css-desktop.css" />
+		<link rel="stylesheet" href="css/css.css" />
 		<link rel="stylesheet" href="css/flexslider.css" />
 		<link rel="shortcut icon" href="img/icon.ico" />
-		<title>404 - Página não encontrada</title>
+		<title>Fale Conosco - Softech - Tecnologia</title>
 		<script src="js/jquery.js"></script>
 		<script defer src="js/jquery.flexslider.js"></script>
 		<script src="js/js.js"></script>
@@ -41,13 +41,38 @@
 		<div id="topo"></div><!-- Topo --><!-- Copiado de index.html -->
 		<div id="corpo" style="width:100%;">
 			<div id="esquerda" align="center"></div><!-- Copiado de index.html -->
-			<div id="meio">
+			<div id="meio" align="center">
+				<fieldset id="texto" style="margin-bottom:30px;">
+					<p><span style="padding-left:45px;">Contate-nos</span> para saber mais sobre o nosso serviço, solicitar
+					orçamentos, informações sobre contratos de manutenção, etc, nas formas de contato abaixo:</p>
+					<ul>
+						<li>Telefone móvel 1:<br>(85) 8562-3662 - Operadora "Oi"</li>
+						<li>Telefone móvel 2:<br>(85) 9947-2102 - Operadora "Tim"</li>
+						<li>Endereço (temporário):<br><a href="https://goo.gl/maps/TZMy4" target="_blank" title="Clique aqui e veja no mapa" class="linkintext">Rua Fagundes Varela, 817, Casa 7</a></li>
+					</ul>
+					<p><span style="padding-left:45px;">Contate-nos</span>, também, pelo chat on-line, localizado no canto
+					superior direito do seu monitor. Caso estejamos off-line, ou queira um atendimento registrado, preencha
+					o formulário abaixo com sua solicitação, dúvida ou sugestão, que faremos o possível para retornar um contato
+					o mais breve possível.</p>
+				</fieldset>
 				<fieldset id="texto">
-					<h1 align="center">404</h1>
-					<h2 align="center">Página não encontrada</h2>
-					<p><span style="padding-left:45px;">O</span> link que você tentou acessar não existe mais ou foi posto incorretamente.</p>
-					<p><span style="padding-left:45px;">P</span>or favor, nos diga o que estava procurando através do Chat On-line ou formulário de email, em "Fale Conosco", que solucionaremos este problema o mais rápido possível.</p>
-					<p><span style="padding-left:45px;">C</span>aso deseje, atualize a página ou utilize o menu de navegação acima para voltar ao site.</p>
+					<h3>Formulário de Contato por E-mail</h3>
+					<form method="POST" action="sendmail.php">
+						<label>Nome:</label><br>
+						<input type="text" name="name" id="name" class="field" maxlength="20" required autocomplete="off"/><br>
+						<label>E-mail:</label><br>
+						<input type="text" name="email" id="email" class="field" maxlength="100" required autocomplete="off" placeholder="Por favor, cheque seu e-mail."/><br>
+						<label>Assunto:</label><br>
+						<select name="subject" id="subject">
+							<option value="D&uacute;vida">Dúvida</option>
+							<option value="Or&ccedil;amento">Orçamento</option>
+							<option value="Sugest&atilde;o">Sugestão</option>
+						</select><br>
+						<label>Mensagem</label><br>
+						<textarea cols="52" rows="5" name="message" id="message" placeholder="Digite sua mensagem aqui." required autocomplete="off"></textarea><br>
+						<span id="entrelinha">Todos os campos são obrigatórios.</span><br>
+						<input type="submit" name="button-sender" id="button-sender" value="Enviar E-mail"/>
+					</form>
 				</fieldset>
 			</div>
 			<div id="direita" align="center">
@@ -64,6 +89,7 @@
 					</section>
 				</div>
 			</div>
+		</div>
 		</div><!-- Corpo -->
 		<div id="rodape"></div><!-- Copiado de index.html -->
 	</body>

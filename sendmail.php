@@ -7,10 +7,10 @@ $message=$_POST['message'];
 $emailmessage="Este é um contato realizado através do site (softechtecnologia.hol.es), por $name, com as seguintes informações:\n\nNome: $name\nE-mail: $senderemail\nAssunto: $subject\n\nMensagem: $message";
 if($_POST['button-sender']){
 	if(mail("$myemail,$senderemail","$subject - enviado pelo site","$emailmessage")){
-		header("Location:mailsuccess.html");}
+		header("Location:enviado-com-sucesso.html");}
 	else{
-		header("Location:mailfailure.html");}
+		header("Location:erro-ao-enviar.html");}
 }
 else{
-	header("Location:mailfailure.html");}
+	header("Location:erro-ao-enviar.html");}
 ?>

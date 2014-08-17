@@ -1,2 +1,2 @@
-ErrorDocument 404 /404page.html
+ErrorDocument 404 /pagina-nao-encontrada.html
 RewriteBase /
