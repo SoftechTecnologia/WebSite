@@ -22,7 +22,7 @@ $(function(){
 	$.ajax({
 		url:'index.html',
 		success: function(rodape){
-			rodape=$(rodape).find(',#rodape #esquerda,#rodape #meio');
+			rodape=$(rodape).find(',#rodape span');
 			$('#rodape').html(rodape);
 		},
 		error: function(){

@@ -1,6 +1,7 @@
 *{outline:none;}
 body{
 	margin:0px; width:100%; height:100%;
+	color:#444;
 	overflow-x:hidden;}
 /* Topo */
 #topo{max-width:100%; height:210px;}
@@ -8,9 +9,7 @@ body{
 	max-width:100%; height:150px;
 	padding:0px;
 	background:linear-gradient(#BBB -30%,#FFF 40%,#FFF 60%,#BBB 130%);
-	-pie-background:linear-gradient(#BBB -30%,#FFF 40%,#FFF 60%,#BBB 130%);
-	background:-webkit-linear-gradient(#BBB -30%,#FFF 40%,#FFF 60%,#BBB 130%);
-	behavior:url(pie.htc);}
+	background:-webkit-linear-gradient(#BBB -30%,#FFF 40%,#FFF 60%,#BBB 130%);}
 #logo-softech{
 	top:13px; left:50%;
 	margin-left:-62px;
@@ -66,11 +65,9 @@ body{
 	border-radius:20px;
 	margin:0 auto;
 	cursor:default;
-	width:450px;}
+	width:80%;}
 /* Formas de Contato*/
-#texto ul li{
-	font-size:12pt;
-	margin-bottom:10px;}
+#texto ul li{margin-bottom:10px;}
 .linkintext{
 	color:#0000CD;
 	font-weight:bold;
@@ -133,8 +130,9 @@ body{
 /* Rodapé */
 #rodape{
 	margin-top:50px;
+	text-align:center;
 	width:100%; height:100px;
-	font-size:16pt;
+	font-size:24pt;
 	color:#BDCBF9;
 	background:#5071F4;
 	cursor:default;
@@ -142,15 +140,10 @@ body{
 	overflow:hidden;}
 #rodape span{
 	padding:5px;
+	vertical-align:-33px;
 	transition:.3s;
 	border-radius:5px;}
 #rodape span:hover{
 	transition:.3s;
 	color:#5071F4;
 	background:#BDCBF9;}
-#rodape #esquerda,#rodape #meio{
-	width:33.33%; height:100px;
-	float:left;
-	margin-top:40px;
-	text-align:center;
-	position:relative;}
