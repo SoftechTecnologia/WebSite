@@ -89,10 +89,11 @@ body{
 	margin-bottom:20px;}
 #texto textarea{
 	resize:none;
+	width:98%;
 	margin-bottom:0;}
-#texto select{height:30px; width:435px;}
+#texto select{height:30px; width:98%;}
 .field{
-	height:25px; width:435px;}
+	height:25px; width:98%;}
 .field:hover,#texto textarea:hover{
 	box-shadow:0 0 20px #5071F4;
 	background:#DDD;
