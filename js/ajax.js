@@ -1,6 +1,6 @@
 $(function(){
 	$.ajax({
-		url:'index.html',
+		url:'/index.html',
 		success: function(topo){
 			topo=$(topo).find(',#topo #bg-logo-softech,#topo #menu');
 			$('#topo').html(topo);
@@ -10,7 +10,7 @@ $(function(){
 		}
 	});
 	$.ajax({
-		url:'index.html',
+		url:'/index.html',
 		success: function(fb){
 			fb=$(fb).find('#esquerda #fb');
 			$('#corpo #esquerda').html(fb);
@@ -20,7 +20,7 @@ $(function(){
 		}
 	});
 	$.ajax({
-		url:'index.html',
+		url:'/index.html',
 		success: function(rodape){
 			rodape=$(rodape).find(',#rodape span');
 			$('#rodape').html(rodape);
