@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html manifest="/offlinemode.manifest">
+<html>
 	<head>
 		<meta charset="utf-8" />
-		<link rel="stylesheet" href="/css/css.css" />
-		<link rel="stylesheet" href="/css/flexslider.css" />
+		<link rel="stylesheet" href="/css.css" />
 		<link rel="shortcut icon" href="/img/icon.ico" />
-		<title>Fale Conosco - Softech - Tecnologia</title>
+		<title>Fale Conosco - Softech</title>
 		<script src="/js/jquery.js"></script>
-		<script defer src="/js/jquery.flexslider.js"></script>
 		<script src="/js/js.js"></script>
-		<script src="/js/ajax.js"></script>
 		<!-- Início do Chat Online -->
 		<script data-cfasync="false">
 			/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
@@ -43,11 +40,11 @@
 			<div id="esquerda" align="center"></div><!-- Copiado de index.html -->
 			<div id="meio" align="center">
 				<fieldset id="texto" style="margin-bottom:30px;">
-					<p><span style="padding-left:45px;">Contate-nos</span> para saber mais sobre o nosso serviço, solicitar
-					orçamentos, informações sobre contratos de manutenção, etc, nas formas de contato abaixo:</p>
+					<p><span style="padding-left:45px;">D</span>eseja esclarescer alguma dúvida, nos dar sugestões, informar algum erro ou conhecer melhor os nossos serviços?</p>
+					<p><span style="padding-left:45px;">E</span>stas são as nossas formas de contato:</p>
 					<ul>
-						<li>Telefone móvel 1:<br>(85) 8562-3662 - Operadora "Oi"</li>
-						<li>Telefone móvel 2:<br>(85) 9947-2102 - Operadora "Tim"</li>
+						<li>Telefone móvel 1:<br><a class="linkintext">(85) 8562-3662 - Operadora "Oi"</a></li>
+						<li>Telefone móvel 2:<br><a class="linkintext">(85) 9947-2102 - Operadora "Tim"</a></li>
 						<li>Endereço (temporário):<br><a href="https://goo.gl/maps/TZMy4" target="_blank" title="Clique aqui e veja no mapa" class="linkintext">Rua Fagundes Varela, 817, Casa 7</a></li>
 					</ul>
 					<p><span style="padding-left:45px;">Contate-nos</span>, também, pelo chat on-line, localizado no canto
@@ -57,7 +54,7 @@
 				</fieldset>
 				<fieldset id="texto">
 					<h3>Formulário de Contato por E-mail</h3>
-					<form method="POST" action="sendmail.php">
+					<form method="POST" action="/sendmail.php">
 						<label>Nome:</label><br>
 						<input type="text" name="name" id="name" class="field" maxlength="20" required autocomplete="off"/><br>
 						<label>E-mail:</label><br>
@@ -75,20 +72,7 @@
 					</form>
 				</fieldset>
 			</div>
-			<div id="direita" align="center">
-				<div id="services-caroussel">
-					<span>Conheça os nossos serviços!<br>Clique nas imagens e leia mais.</span>
-					<section class="slider">
-						<div class="flexslider">
-							<ul class="slides">
-								<li><a href="/produtos-e-servicos/hd-recovery.html" title="Recuperação de dados"><img src="/img/repairpc/(1).jpg" alt="Recuperação de dados" /></a></li>
-								<li><a href="/produtos-e-servicos/full-clean.html" title="Limpeza de Hardware"><img src="/img/repairpc/(2).jpg" alt="Limpeza de Hardware" /></a></li>
-								<li><a href="/produtos-e-servicos/hardware-recovery.html" title="Recuperação de Hardware"><img src="/img/repairpc/(3).jpg" alt="Recuperação de Hardware" /></a></li>
-							</ul>
-						</div>
-					</section>
-				</div>
-			</div>
+			<div id="direita" align="center"></div><!-- Copiado de index.html -->
 		</div>
 		</div><!-- Corpo -->
 		<div id="rodape"></div><!-- Copiado de index.html -->

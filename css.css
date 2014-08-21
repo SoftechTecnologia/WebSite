@@ -1,6 +1,7 @@
 *{outline:none;}
 body{
-	margin:0px; width:100%; height:100%;
+	margin:0px;
+	width:100%; height:100%;
 	color:#444;
 	overflow-x:hidden;}
 /* Topo */
@@ -66,6 +67,7 @@ body{
 	margin:0 auto;
 	cursor:default;
 	width:80%;}
+#texto h1,#texto h2,#texto h3{text-align:center;}
 /* Formas de Contato*/
 #texto ul li{margin-bottom:10px;}
 .linkintext{
@@ -123,10 +125,10 @@ body{
 	float:left;}/* Fim de Formulário de E-mail*/
 #corpo #direita span{
 	cursor:default;
-	font-size:14pt;}
-#direita img{
-	border-radius:10px;}
-#direita #services-caroussel{
+	font-size:14pt;
+	width:70%;}
+#corpo #direita img{
+	border-radius:10px;
 	width:70%;}/* Fim do Corpo */
 /* Rodapé */
 #rodape{

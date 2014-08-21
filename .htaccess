@@ -1,2 +1,13 @@
-ErrorDocument 404 /pagina-nao-encontrada.html
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?softechtecnologia.hol.es/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?m.softechtecnologia.hol.es/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://localhost/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://google.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://google.com.br/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://bing.com/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://yahoo.com/.*$ [NC]
+RewriteRule \.(gif|jpg|png|ico)$ – [F]
+ErrorDocument 404 /erro/pagina-nao-encontrada.html
+ErrorDocument 403 /erro/acesso-nao-autorizado.html
 RewriteBase /
