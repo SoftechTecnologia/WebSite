@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /envio-de-email
+Disallow: /erro
+Disallow: /img/professional-img.jpg
+Disallow: /google95757ccd58792274.html

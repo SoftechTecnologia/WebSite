@@ -1,30 +1,31 @@
-*{outline:none;}
+*{outline:none}
 body{
-	margin:0px;
+	margin:0;
 	width:100%; height:100%;
 	color:#444;
-	overflow-x:hidden;}
+	background:#E2E2E2;
+	overflow-x:hidden}
 /* Topo */
-#topo{max-width:100%; height:210px;}
+#topo{max-width:100%; height:210px}
 #bg-logo-softech{
 	max-width:100%; height:150px;
 	padding:0px;
 	background:linear-gradient(#BBB -30%,#FFF 40%,#FFF 60%,#BBB 130%);
-	background:-webkit-linear-gradient(#BBB -30%,#FFF 40%,#FFF 60%,#BBB 130%);}
+	background:-webkit-linear-gradient(#BBB -30%,#FFF 40%,#FFF 60%,#BBB 130%)}
 #logo-softech{
 	top:13px; left:50%;
 	margin-left:-62px;
-	position:absolute;}/* Fim do Topo */
+	position:absolute}/* Fim do Topo */
 /* Menu */
 #menu{
 	max-width:100%; height:60px;
-	background:#5071F4;}
+	background:#5071F4}
 #menu ul{
 	margin:0; padding:0;
 	list-style:none;
 	position:relative;
 	float:left;
-	left:50%;}
+	left:50%}
 .item{
 	padding:13px 20px;
 	position:relative;
@@ -34,102 +35,58 @@ body{
 	color:#BDCBF9;
 	background:#5071F4;
 	right:50%;
-	transition:.3s;}
+	transition:.3s}
 .item:hover{
 	transition:.3s;
 	color:#5071F4;
-	background:#BDCBF9;}/* Fim do Menu */
+	background:#BDCBF9}/* Fim do Menu */
 /* Corpo */
 #corpo{
 	margin:0; padding:0px;
-	top:210px;}
+	top:210px}
 #corpo #esquerda{
 	width:30%;
 	margin-left:0;
 	margin-top:50px;
 	margin-bottom:50px;
-	float:left;}
+	float:left}
 #corpo #meio{
 	width:40%;
 	margin-top:50px;
 	margin-bottom:50px;
-	float:left;}
+	float:left}
 #corpo #direita{
 	width:30%;
 	margin-right:0;
 	margin-top:50px;
 	margin-bottom:50px;
-	float:left;}
+	float:left}
 #texto{
 	text-align:justify;
 	font-size:14pt;
 	border-radius:20px;
 	margin:0 auto;
 	cursor:default;
-	width:80%;}
-#texto h1,#texto h2,#texto h3{text-align:center;}
+	width:80%}
+#meio #texto p:first-letter{margin-left:40px}
+#texto h1,#texto h2,#texto h3{text-align:center}
 /* Formas de Contato*/
-#texto ul li{margin-bottom:10px;}
+#texto ul li{margin-bottom:10px}
 .linkintext{
 	color:#0000CD;
 	font-weight:bold;
 	text-decoration:none;
-	transition:.3s;}
+	transition:.3s}
 .linkintext:hover{
 	color:#9400D3;
-	transition:.3s;}/* Fim de Formas de Contato*/
-/* Formulário de E-mail*/
-.field,#texto textarea,#texto select{
-	border-radius:5px;
-	border:none;
-	padding-left:5px;
-	margin-top:5px;
-	cursor:pointer;
-	background:#CCC;
-	transition:.3s;}
-.field,#texto select{
-	margin-bottom:20px;}
-#texto textarea{
-	resize:none;
-	width:98%;
-	margin-bottom:0;}
-#texto select{height:30px; width:98%;}
-.field{
-	height:25px; width:98%;}
-.field:hover,#texto textarea:hover{
-	box-shadow:0 0 20px #5071F4;
-	background:#DDD;
-	transition:.3s;}
-.field:focus,#texto textarea:focus{
-	box-shadow:0 0 20px #5071F4;
-	background:#FFF;
-	cursor:default;
-	transition:.3s;}
-#button-sender{
-	font-size:22pt;
-	padding:20px;
-	border-radius:20px;
-	cursor:pointer;
-	color:#BDCBF9;
-	background:#5071F4;
-	transition:.3s;
-	border:none;}
-#button-sender:hover{
-	color:#5071F4;
-	box-shadow:0 0 40px #5071F4;
-	background:#BDCBF9;
-	transition:.3s;}
-#entrelinha{
-	font-size:8pt;
-	color:red;
-	float:left;}/* Fim de Formulário de E-mail*/
+	transition:.3s}/* Fim de Formas de Contato*/
 #corpo #direita span{
 	cursor:default;
 	font-size:14pt;
-	width:70%;}
-#corpo #direita img{
-	border-radius:10px;
-	width:70%;}/* Fim do Corpo */
+	width:70%}
+#corpo #direita #secure{
+	position:absolute;
+	width:24%; height:115%}/* Fim do Corpo */
 /* Rodapé */
 #rodape{
 	margin-top:50px;
@@ -140,13 +97,63 @@ body{
 	background:#5071F4;
 	cursor:default;
 	float:left;
-	overflow:hidden;}
+	overflow:hidden}
 #rodape span{
 	padding:5px;
 	vertical-align:-33px;
 	transition:.3s;
-	border-radius:5px;}
+	border-radius:5px}
 #rodape span:hover{
 	transition:.3s;
 	color:#5071F4;
-	background:#BDCBF9;}
+	background:#BDCBF9}/* Fim do Rodapé */
+/**** Classes e divs em geral ****/
+.img{
+	border-radius:10px;
+	width:70%}
+.far{margin-top:50px}
+/* Formulário de E-mail*/
+.field,#texto textarea,#texto select{
+	border-radius:5px;
+	border:none;
+	padding-left:5px;
+	margin-top:5px;
+	cursor:pointer;
+	background:#CCC;
+	transition:.3s}
+.field,#texto select{
+	margin-bottom:20px}
+#texto textarea{
+	resize:none;
+	width:98%;
+	margin-bottom:0}
+#texto select{height:30px; width:98%}
+.field{
+	height:25px; width:98%}
+.field:hover,#texto textarea:hover{
+	box-shadow:0 0 20px #5071F4;
+	background:#DDD;
+	transition:.3s}
+.field:focus,#texto textarea:focus{
+	box-shadow:0 0 20px #5071F4;
+	background:#FFF;
+	cursor:default;
+	transition:.3s}
+#button-sender{
+	font-size:22pt;
+	padding:20px;
+	border-radius:20px;
+	cursor:pointer;
+	color:#BDCBF9;
+	background:#5071F4;
+	transition:.3s;
+	border:none}
+#button-sender:hover{
+	color:#5071F4;
+	box-shadow:0 0 40px #5071F4;
+	background:#BDCBF9;
+	transition:.3s}
+#entrelinha{
+	font-size:8pt;
+	color:red;
+	float:left}/* Fim de Formulário de E-mail*/
