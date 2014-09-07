@@ -1,15 +1,9 @@
+// Link para abrir e pôr foco em chat
 function chatlink(){
 	$('#habla_oplink_a').click();
 	$('#habla_wcsend_input').focus();
 };
-$(window).load(function(){
-	$('.flexslider').flexslider({
-		animation: "slide",
-		start: function(slider){
-			$('body').removeClass('loading');
-		}
-	});
-});
+
 // Redirecionamento para site mobile
 var url_mobile = 'http://m.softechtecnologia.hol.es';
 (function(a,b){
@@ -29,16 +23,17 @@ var url_mobile = 'http://m.softechtecnologia.hol.es';
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 ga('create', 'UA-54058374-1', 'auto');
 ga('send', 'pageview');
+
 // Requisições Ajax
 $(function(){
 	$.ajax({
 		url:'/index.html',
-		success: function(topo){topo=$(topo).find(',#topo #bg-logo-softech,#topo #menu');$('#topo').html(topo);},
+		success: function(topo){topo=$(topo).find('#bg-logo-softech, #menu');$('#topo').html(topo);},
 		error: function(){alert('Ocorreu um erro ao inicializar o site. \u00c9 preciso atualizar a p\u00e1gina.');}
 	});
 	$.ajax({
 		url:'/index.html',
-		success: function(esquerda){esquerda=$(esquerda).find(',#esquerda #fb,#esquerda a');$('#corpo #esquerda').html(esquerda);},
+		success: function(esquerda){esquerda=$(esquerda).find('#esquerda #fb, #esquerda a');$('#corpo #esquerda').html(esquerda);},
 		error: function(){alert('Ocorreu um erro ao inicializar o site. \u00c9 preciso atualizar a p\u00e1gina.');}
 	});
 	$.ajax({
@@ -48,7 +43,7 @@ $(function(){
 	});
 	$.ajax({
 		url:'/index.html',
-		success: function(rodape){rodape=$(rodape).find(',#rodape span');$('#rodape').html(rodape);},
+		success: function(rodape){rodape=$(rodape).find('#rodapetext');$('#rodape').html(rodape);},
 		error: function(){alert('Ocorreu um erro ao inicializar o site. \u00c9 preciso atualizar a p\u00e1gina.');}
 	});
 });
