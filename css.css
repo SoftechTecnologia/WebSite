@@ -27,7 +27,7 @@ body{
 	float:left;
 	left:50%}
 .item{
-	padding:13px 20px;
+	padding:13.5px 20px;
 	position:relative;
 	cursor:pointer;
 	float:left;
@@ -48,18 +48,15 @@ body{
 	width:30%;
 	margin-left:0;
 	margin-top:50px;
-	margin-bottom:50px;
 	float:left}
 #corpo #meio{
 	width:40%;
 	margin-top:50px;
-	margin-bottom:50px;
 	float:left}
 #corpo #direita{
 	width:30%;
 	margin-right:0;
 	margin-top:50px;
-	margin-bottom:50px;
 	float:left}
 #texto{
 	text-align:justify;
@@ -85,8 +82,9 @@ body{
 	font-size:14pt;
 	width:70%}
 #corpo #direita #secure{
+	margin:0; padding:0;
 	position:absolute;
-	width:24%; height:78%}/* Fim do Corpo */
+	width:24%; height:370px}/* Fim do Corpo */
 /* Rodapé */
 #rodape{
 	margin-top:50px;
