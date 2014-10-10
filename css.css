@@ -6,9 +6,9 @@ body{
 	background:#E2E2E2;
 	overflow-x:hidden}
 /* Topo */
-#topo{max-width:100%; height:210px}
+#topo{width:100%; height:210px}
 #bg-logo-softech{
-	max-width:100%; height:150px;
+	width:100%; height:150px;
 	padding:0px;
 	background:linear-gradient(#BBB -30%,#FFF 40%,#FFF 60%,#BBB 130%);
 	background:-webkit-linear-gradient(#BBB -30%,#FFF 40%,#FFF 60%,#BBB 130%)}
@@ -18,7 +18,7 @@ body{
 	position:absolute}/* Fim do Topo */
 /* Menu */
 #menu{
-	max-width:100%; height:60px;
+	width:100%; height:60px;
 	background:#5071F4}
 #menu ul{
 	margin:0; padding:0;
@@ -27,7 +27,7 @@ body{
 	float:left;
 	left:50%}
 .item{
-	padding:13.5px 20px;
+	padding:13px 20px;
 	position:relative;
 	cursor:pointer;
 	float:left;
@@ -45,7 +45,7 @@ body{
 	margin:0; padding:0px;
 	top:210px}
 #corpo #esquerda{
-	width:30%;
+	width:29%;
 	margin-left:0;
 	margin-top:50px;
 	float:left}
@@ -54,7 +54,7 @@ body{
 	margin-top:50px;
 	float:left}
 #corpo #direita{
-	width:30%;
+	width:29%;
 	margin-right:0;
 	margin-top:50px;
 	float:left}
