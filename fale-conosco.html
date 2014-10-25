@@ -48,6 +48,7 @@
 						<li>Telefone móvel 1:<br><a class="linkintext">(85) 8562-3662 - Operadora "Oi"</a></li>
 						<li>Telefone móvel 2:<br><a class="linkintext">(85) 9947-2102 - Operadora "Tim"</a></li>
 						<li>Endereço (temporário):<br><a href="https://goo.gl/maps/TZMy4" target="_blank" title="Clique aqui e veja no mapa" class="linkintext">Rua Fagundes Varela, 817, Casa 7</a></li>
+						<li>E-mail:<br><a class="linkintext">adm@softechtecnologia.hol.es</a></li>
 					</ul>
 					<p>Contate-nos, também, pelo <a href="javascript:chatlink()" class="linkintext">Chat Online</a>.
 					Caso estejamos off-line, ou queira um atendimento registrado, preencha
@@ -60,16 +61,17 @@
 						<label>Nome:</label><br>
 						<input type="text" name="name" id="name" class="field" maxlength="20" required autocomplete="off"/><br>
 						<label>E-mail:</label><br>
-						<input type="text" name="email" id="email" class="field" maxlength="100" required autocomplete="off" placeholder="Por favor, cheque seu e-mail."/><br>
+						<input type="email" name="email" id="email" class="field" maxlength="100" required autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Por favor, cheque se seu email está correto!" /><br>
+						<div id="emailresponse" name="emailresponse"></div>
 						<label>Assunto:</label><br>
 						<select name="subject" id="subject">
 							<option value="D&uacute;vida">Dúvida</option>
 							<option value="Or&ccedil;amento">Orçamento</option>
 							<option value="Sugest&atilde;o">Sugestão</option>
 						</select><br>
-						<label>Mensagem</label><br>
+						<label>Mensagem:</label><br>
 						<textarea rows="5" name="message" id="message" placeholder="Digite sua mensagem aqui." required autocomplete="off"></textarea><br>
-						<span id="entrelinha">Todos os campos são obrigatórios.</span><br>
+						<span id="entrelinha">* Todos os campos são obrigatórios.</span><br>
 						<input type="submit" name="button-sender" id="button-sender" value="Enviar E-mail"/>
 					</form>
 				</fieldset>
