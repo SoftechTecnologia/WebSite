@@ -108,7 +108,7 @@ body{
 /**** Classes e divs em geral ****/
 .img{
 	border-radius:10px;
-	width:70%}
+	width:50%}
 .far{margin-top:50px}
 /* Formulário de E-mail*/
 .field,#texto textarea,#texto select{

@@ -47,3 +47,32 @@ $(function(){
 		error: function(){alert('Ocorreu um erro ao inicializar o site. \u00c9 preciso atualizar a p\u00e1gina.');}
 	});
 });
+// Interface de Downloads
+// Windows
+var voltar="<p><img src='/img/l_ar.png' width='15px' height='15px' /> <a class='linkintext' onclick='def()'>Voltar</a></p>";
+var xx="<p>- <a class='linkintext' href='http://goo.gl/A1eqIS' title='Clique para fazer o download'>Suporte Softech</a>: Acesso rápido aos nossos contatos;</p><p>- <a class='linkintext' href='http://goo.gl/rWbTwd' title='Clique para fazer o download'>Ammyy Admin</a>: Acesso remoto;</p><p>- <a class='linkintext' href='http://goo.gl/aUK1KQ' title='Clique para fazer o download'>CCleaner</a>: Otimizador de Sistema;</p><p>- <a class='linkintext' href='http://goo.gl/Oy0iUa' title='Clique para fazer o download'>CD Burner XP</a>: Gravador de Mídia;</p><p>- <a class='linkintext' href='http://goo.gl/WBUqzk' title='Clique para fazer o download'>CPU-Z</a>: Leitor de Hardware;</p><p>- <a class='linkintext' href='http://goo.gl/JIyAyx' title='Clique para fazer o download'>Firefox</a>: Navegador;</p><p>- <a class='linkintext' href='http://goo.gl/jgrtPe' title='Clique para fazer o download'>Chrome</a>: Navegador;</p><p>- <a class='linkintext' href='http://goo.gl/J4IRaz' title='Clique para fazer o download'>HWMonitor</a>: Leitor de Hardware;</p><p>- <a class='linkintext' href='http://goo.gl/mxDe4c' title='Clique para fazer o download'>LibreOffice</a>: Pacote office;</p><p>- <a class='linkintext' href='http://goo.gl/kkNqO4' title='Clique para fazer o download'>Microsoft Security Essentials</a>: Antivírus;</p><p>- <a class='linkintext' href='http://goo.gl/MQDEq1' title='Clique para fazer o download'>Microsoft Silverlight</a>: Plugin para navegador;</p><p>- <a class='linkintext' href='http://goo.gl/3GzEhE' title='Clique para fazer o download'>TeamViewer</a>: Acesso Remoto;</p><p>- <a class='linkintext' href='http://goo.gl/eN6vu7' title='Clique para fazer o download'>µTorrent</a>: Antivírus;</p>";
+function def(){
+	$('#opcoes')
+	.html("<p>- Windows: <a class='linkintext' onclick='winx86();'>x86 (32 bits)</a> / <a class='linkintext' onclick='winx64();'>x64 (64 bits)</a></p><p>- Mac OS: <a class='linkintext' onclick='mountainlion()'>Mountain Lion (10.6.X)</a></p><p>- Linux: <a href='/fale-conosco.html' class='linkintext'>Diga-nos o que precisa!</a></p>")
+	.fadeOut(0).fadeIn(1000);
+}
+function winx86(){
+	$('#opcoes')
+	.html(voltar+xx+"<p>- <a class='linkintext' href='http://goo.gl/53xOMa' title='Clique para fazer o download'>7-zip</a>: Compactador/descompactador de arquivos;</p><p>- <a class='linkintext' href='http://goo.gl/nyRKhw' title='Clique para fazer o download'>Media Player Classic</a>: Player de vídeo;</p>"+voltar)
+	.fadeOut(0).fadeIn(1000);
+}
+function winx64(){
+	$('#opcoes')
+	.html(voltar+xx+"<p>- <a class='linkintext' href='http://goo.gl/VEc301' title='Clique para fazer o download'>7-zip</a>: Compactador/descompactador de arquivos;</p><p>- <a class='linkintext' href='http://goo.gl/Wi4ZIG' title='Clique para fazer o download'>Media Player Classic</a>: Player de vídeo;</p>"+voltar)
+	.fadeOut(0).fadeIn(1000);
+}
+// Mac
+function os(){
+	$('#opcoes')
+	.html("<p>- <a class='linkintext' onclick='mountainlion'>Mountain Lion (10.6.X)</a></p>"+voltar)
+	.fadeOut(0).fadeIn(1000);
+}
+function mountainlion(){
+	$('#opcoes')
+	.html("<p>- <a class='linkintext' href='http://goo.gl/s2ihwu' title='Clique para fazer o download'>LibreOffice</a>: Pacote office;</p>"+voltar)
+}
