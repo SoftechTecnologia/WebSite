@@ -7,7 +7,6 @@ function chatlink(){
 	$('#habla_oplink_a').click();
 	$('#habla_wcsend_input').focus();
 };
-
 // Redirecionamento para site mobile
 var url_mobile = 'http://m.softechtecnologia.hol.es';
 (function(a,b){
