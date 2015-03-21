@@ -1,7 +1,6 @@
 RewriteEngine on
 RewriteCond %{HTTP_REFERER} !^$
 RewriteCond %{HTTP_REFERER} !^http://(www\.)?softechtecnologia.hol.es/.*$ [NC]
-RewriteCond %{HTTP_REFERER} !^http://(www\.)?m.softechtecnologia.hol.es/.*$ [NC]
 RewriteCond %{HTTP_REFERER} !^http://localhost/.*$ [NC]
 RewriteCond %{HTTP_REFERER} !^http://(www\.)?google.com/.*$ [NC]
 RewriteCond %{HTTP_REFERER} !^http://(www\.)?google.com.br/.*$ [NC]
