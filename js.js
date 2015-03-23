@@ -53,18 +53,20 @@ $(function(){
 	});
 });
 // Interface de Downloads
-// Windows
-// Padrões de partes de código
+// Imagens
+var iconVoltar="data:image/png;base64,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";
+// Padrões de código
 var progIni="<p>- <a class='linkintext' target='_blank' href='";
 var progDown="' title='Clique para fazer o download'>";
 var conjProgIni="<p>- <a class='linkintext' target='_blank' onclick='";
 var conjProgIr="' title='Clique para ir'>";
-var voltaIni="<p><img src='/img/l_ar.png' width='15px' height='15px' /> <a class='linkintext' onclick='";
+var voltaIni="<p><img src='"+iconVoltar+"' width='15px' height='15px' /> <a class='linkintext' onclick='";
 var voltaFim="'>Voltar</a></p>";
 // Sistemas Operacionais
 var windows="<p>- <a class='linkintext' onclick='progWin();'>Windows</a></p>";
 var mac="<p>- <a class='linkintext' onclick='progMac()'>Mac OS</a></p>";
 var linux="<p>- Linux: <a href='/fale-conosco.html' class='linkintext'>Diga-nos o que precisa!</a></p>";
+// Windows
 // Programas Windows
 var stSupport=progIni+"http://goo.gl/tcEqog"+progDown+"Suporte Softech</a>: Atalho aos nossos contatos;</p>";
 var sevenZipConj=conjProgIni+"sZip()"+conjProgIr+"7-zip</a>: Manipulador de arquivos compactos;</p>";//Função
