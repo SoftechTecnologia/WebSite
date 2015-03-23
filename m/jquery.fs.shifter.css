@@ -43,9 +43,9 @@
 	transition:transform 0.2s ease}
 .shifter-enabled .shifter-handle{
 	width:20%; /* Tamanho do botão de abertura do menu lateral */
-	height:100px;
+	height:150px;
 	position:relative;
-	background:#ffffff;
+	background:#D8D8D8;
 	cursor:pointer;
 	display:block;
 	overflow:hidden;
@@ -56,15 +56,15 @@
 	-ms-user-select:none;
 	user-select:none}
 .shifter-enabled .shifter-handle:after{
-	height:12%; /* espesssura das 3 hastes */
-	width:80%; /* largura das 3 hastes */
+	height:10%; /* espesssura das 3 hastes */
+	width:70%; /* largura das 3 hastes */
 	position:absolute;
 	top:0;
 	right:0;
 	bottom:0;
 	left:0;
 	background:#666666;
-	box-shadow:0 22px 0 #666666,0 -22px 0 #666666; /* altura das 3 hastes */
+	box-shadow:0 32px 0 #666666,0 -32px 0 #666666; /* altura das 3 hastes */
 	content:'';
 	display:block;
 	margin:auto}

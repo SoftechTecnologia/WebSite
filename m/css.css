@@ -1,9 +1,19 @@
 #menu ul{left:70%}
 #menu ul:last-child{padding-bottom:100px}
-#texto{font-size:150%}
+#texto{font-size:300%}
 .item{
 	margin-right:10%;
-	font-size:300%}
-option{font-size:300%}
+	font-size:600%;
+	transition:0s}
+.item:hover{transition:0s}
 .field,#texto select{
-	height:60px}
+	height:80px;
+	transition:0s}
+.linkintext{transition:0s}
+.linkintext:hover{transition:0s}
+#rodape span{transition:0s}
+#rodape span:hover{transition:0s}
+#texto textarea{transition:0s}
+.field:focus,#texto textarea:focus{transition:0s}
+#button-sender{transition:0s}
+#button-sender:hover{transition:0s}
