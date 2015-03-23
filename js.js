@@ -1,5 +1,5 @@
 ﻿// Links da página
-var principal="/",sobreNos="/sobre-nos.html",produtosEServicos="/produtos-e-servicos",faq="/perguntas-frequentes.html",downloads="/downloads.html",fale="/fale-conosco.html";
+var principal="/",sobreNos="/sobre-nos.html",produtosEServicos="/produtos-e-servicos",downloads="/downloads.html",fale="/fale-conosco.html",doeSangue="/promocoes/campanha-doe-sangue.html";
 // Fade em todas as páginas
 $(document).ready(function (){
 	$('body').css('opacity', '0').fadeTo(500, 1,'swing');

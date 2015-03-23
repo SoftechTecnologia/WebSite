@@ -1,16 +1,30 @@
 <?php
+$accesstype=$_POST['dorm'];
+if($accesstype==""){$accesstype="Mobile";}
 $myemail="adm@softechtecnologia.hol.es";
 $name=$_POST['name'];
 $senderemail=$_POST['email'];
 $subject=$_POST['subject'];
 $message=$_POST['message'];
-$emailmessage="Este é um contato realizado através do site (softechtecnologia.hol.es), por $name, com as seguintes informações:\n\nNome: $name\nE-mail: $senderemail\nAssunto: $subject\n\nMensagem: $message";
+$emailmessage="Este é um contato realizado através da versão $accesstype do site \"softechtecnologia.hol.es\", por $name, com as seguintes informações:\n\nNome: $name\nE-mail: $senderemail\nAssunto: $subject\n\nMensagem: $message";
 if($_POST['button-sender']){
 	if(mail("$myemail,$senderemail","$subject - enviado pelo site","$emailmessage")){
-		header("Location:/envio-de-email/enviado-com-sucesso.html");}
+		if($accesstype=="Desktop"){
+			header("Location:/envio-de-email/enviado-com-sucesso.html");}
+		else{
+			header("Location:/m/envio-de-email/enviado-com-sucesso.html");}
+	}
 	else{
-		header("Location:/envio-de-email/erro-ao-enviar.html");}
+		if($accesstype=="Desktop"){
+			header("Location:/envio-de-email/erro-ao-enviar.html");}
+		else{
+			header("Location:/m/envio-de-email/erro-ao-enviar.html");}
+	}
 }
 else{
-	header("Location:/envio-de-email/erro-ao-enviar.html");}
+	if($accesstype=="Desktop"){
+		header("Location:/envio-de-email/erro-ao-enviar.html");}
+	else{
+		header("Location:/m/envio-de-email/erro-ao-enviar.html");}
+}
 ?>

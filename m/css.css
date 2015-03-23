@@ -1,0 +1,9 @@
+#menu ul{left:70%}
+#menu ul:last-child{padding-bottom:100px}
+#texto{font-size:150%}
+.item{
+	margin-right:10%;
+	font-size:300%}
+option{font-size:300%}
+.field,#texto select{
+	height:60px}

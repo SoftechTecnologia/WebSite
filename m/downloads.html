@@ -9,6 +9,7 @@
 		<script src="/m/jquery.fs.shifter.js"></script>
 		<script src="/m/js.js"></script>
 		<link rel="stylesheet" href="/css.css" />
+		<link rel="stylesheet" href="/m/css.css" />
 		<link rel="stylesheet" href="/m/jquery.fs.shifter.css" />
 		<style>
 			body{text-decoration:none}
@@ -22,25 +23,20 @@
 				display:block;
 				margin:0 0 50px}
 		</style>
-		<script>
-			$(document).ready(function(){
-				$.shifter({
-					maxWidth: Infinity
-				});
-			});
-		</script>
 	</head>
 	<body class="shifter" style="width:100%">
 		<div class="shifter-page">
 			<p class="shifter-handle"></p>
 			<div id="logo"></div>
 			<div id="meio">
-				<h2 align="center">Servidor mobile em manutenção</h2>
-				<p align="justify" style="font-size:14pt;"><span style="padding-left:45px;">D</span>esculpe-nos fazer você passar por este transtorno, mas estamos fazendo o máximo possível para esta página ficar impecável para você utilizá-la.</p>
-				<p align="justify" style="font-size:14pt;"><span style="padding-left:45px;">P</span>edimos que o acesso seja realizado exclusivamente por navegadores Desktops, por enquanto.</p>
+				<fieldset id="texto" style="margin-bottom:30px;">
+					<h2>Página não disponível na versão Mobile</h2>
+					<p>Desculpe, mas esta página está disponível somente na versão "Desktop" desse site.</p>
+					<p>Entre no site a partir de um computador para ter acesso aos arquivos.</p>
+				</fieldset>
 			</div>
 		</div>
-		<nav class="shifter-navigation">
-		</nav>
+		<nav class="shifter-navigation"></nav>
+		<div id="rodape"></div> <!-- Copiado de "/index.html" -->
 	</body>
 </html>
