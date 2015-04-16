@@ -2,7 +2,7 @@
 var principal="/",sobreNos="/sobre-nos.html",produtosEServicos="/produtos-e-servicos",downloads="/downloads.html",fale="/fale-conosco.html",doeSangue="/promocoes/campanha-doe-sangue.html";
 // Fade em todas as páginas
 $(document).ready(function (){
-	$('body').css('opacity', '0').fadeTo(500, 1,'swing');
+	$('body').css('opacity', '0').fadeTo(250, 1,'swing');
 });
 // Link para abrir e pôr foco em chat
 function chatlink(){
@@ -62,10 +62,7 @@ var conjProgIni="<p>- <a class='linkintext' target='_blank' onclick='";
 var conjProgIr="' title='Clique para ir'>";
 var voltaIni="<p><img src='"+iconVoltar+"' width='15px' height='15px' /> <a class='linkintext' onclick='";
 var voltaFim="'>Voltar</a></p>";
-// Sistemas Operacionais
-var windows="<p>- <a class='linkintext' onclick='progWin();'>Windows</a></p>";
-var mac="<p>- <a class='linkintext' onclick='progMac()'>Mac OS</a></p>";
-var linux="<p>- Linux: <a href='/fale-conosco.html' class='linkintext'>Diga-nos o que precisa!</a></p>";
+var fdTm=250;
 // Windows
 // Programas Windows
 var stSupport=progIni+"http://goo.gl/tcEqog"+progDown+"Suporte Softech</a>: Atalho aos nossos contatos;</p>";
@@ -81,89 +78,104 @@ var hwmonitor=progIni+"http://goo.gl/CHK2U4"+progDown+"HWMonitor</a>: Leitor de 
 var lofficeWin=progIni+"http://goo.gl/1qcJSn"+progDown+"LibreOffice</a>: Pacote office;</p>";
 var mediaPlayerConj=conjProgIni+"mPlayer()"+conjProgIr+"Media Player Classic</a>: Player de vídeo;</p>";//Função
 var mse=progIni+"http://goo.gl/HwjJbF"+progDown+"Microsoft Security Essentials</a>: Antivírus;</p>";
+var nppp=progIni+"http://goo.gl/OIA2EJ"+progDown+"Notepad++</a>: Editor de texto avançado;</p>";
 var silverlight=progIni+"http://goo.gl/Dm9ZG0"+progDown+"Microsoft Silverlight</a>: Plugin para navegador;</p>";
 var pdfarc=progIni+"http://goo.gl/6W9zbn"+progDown+"PDF Architect</a>: Leitor/Editor de PDFs;</p>";
 var unlocker=progIni+"http://goo.gl/Y74RSS"+progDown+"Unlocker</a>: Manipulador de arquivos;</p>";
 var utorrent=progIni+"http://goo.gl/t5dyx7"+progDown+"µTorrent</a>: Cliente BitTorrent;</p>";
-var programasWin=stSupport+sevenZipConj+winProg+acessoRemoto+ccleaner+cdburner+cpuz+firefox+chrome+hwmonitor+lofficeWin+mediaPlayerConj+mse+silverlight+pdfarc+unlocker+utorrent;
+var programasWin=stSupport+sevenZipConj+winProg+acessoRemoto+ccleaner+cdburner+cpuz+firefox+chrome+hwmonitor+lofficeWin+mediaPlayerConj+mse+nppp+silverlight+pdfarc+unlocker+utorrent;
 // Programas Mac
 var lofficeMac=progIni+"http://goo.gl/nSeYxU"+progDown+"LibreOffice</a>: Pacote office (OS 10.8+);</p>";
 var programasMac=lofficeMac;
 function def(){
-	$('#opcoes')
-	.fadeOut(500, function(){
+	$('.oss')
+	.fadeOut(fdTm, function(){
+		$.ajax({
+			url:'/downloads.html',
+			success: function(windows){windows=$(windows).find('.windows');$('.oss').html(windows);},
+			error: function(){alert('Ocorreu um erro ao inicializar o site. \u00c9 preciso atualizar a p\u00e1gina.');}
+		});
+		$.ajax({
+			url:'/downloads.html',
+			success: function(mac){mac=$(mac).find('.mac');$('.oss').append(mac);},
+			error: function(){alert('Ocorreu um erro ao inicializar o site. \u00c9 preciso atualizar a p\u00e1gina.');}
+		});
+		$.ajax({
+			url:'/downloads.html',
+			success: function(linux){linux=$(linux).find('.linux');$('.oss').append(linux);},
+			error: function(){alert('Ocorreu um erro ao inicializar o site. \u00c9 preciso atualizar a p\u00e1gina.');}
+		});
 		$(this)
-		.html(windows+mac+linux)
-		.fadeIn(500)
+		.fadeIn(fdTm)
 	});
 }
 function progWin(){
 	var link="def()";
 	var voltar=voltaIni+link+voltaFim;
-	$('#opcoes')
-	.fadeOut(500, function(){
+	$('.oss')
+	.fadeOut(fdTm, function(){
 		$(this)
 		.html(voltar+programasWin+voltar)
-		.fadeIn(500)
+		.fadeIn(fdTm)
 	})
 }
 function remAcces(){
 	var link="progWin()";
 	var voltar=voltaIni+link+voltaFim;
-	$('#opcoes')
-	.fadeOut(500, function(){
+	$('.oss')
+	.fadeOut(fdTm, function(){
 		var amAd=progIni+"http://goo.gl/fyPhxI"+progDown+"Ammyy Admin</a>;</p>";
 		var teamViewer=progIni+"http://goo.gl/53TnGK"+progDown+"TeamViewer</a>;</p>";
 		$(this)
 		.html("<p><h3>7-zip</h3></p>"+voltar+amAd+teamViewer+voltar)
-		.fadeIn(500)
+		.fadeIn(fdTm)
 	})
 }
 function sZip(){
 	var link="progWin()";
 	var voltar=voltaIni+link+voltaFim;
-	$('#opcoes')
-	.fadeOut(500, function(){
+	$('.oss')
+	.fadeOut(fdTm, function(){
 		var sevenZip86=progIni+"http://goo.gl/eSFSgn"+progDown+"Versão de 32 bits (x86)</a></p>";
 		var sevenZip64=progIni+"http://goo.gl/EZfmBV"+progDown+"Versão de 64 bits (x64)</a></p>";
 		$(this)
 		.html("<p><h3>7-zip</h3></p>"+voltar+sevenZip86+sevenZip64+voltar)
-		.fadeIn(500)
+		.fadeIn(fdTm)
 	})
 }
 function mPlayer(){
 	var link="progWin()";
 	var voltar=voltaIni+link+voltaFim;
-	$('#opcoes')
-	.fadeOut(500, function(){
+	$('.oss')
+	.fadeOut(fdTm, function(){
 		var mediaPlayer86=progIni+"http://goo.gl/EDQKJn"+progDown+"Versão de 32 bits (x86)</a></p>";
 		var mediaPlayer64=progIni+"http://goo.gl/CMnZtu"+progDown+"Versão de 64 bits (x64)</a></p>";
 		$(this)
 		.html("<p><h3>Media Player Classic</h3></p>"+voltar+mediaPlayer86+mediaPlayer64+voltar)
-		.fadeIn(500)
+		.fadeIn(fdTm)
 	})
 }
 function winApp(){
 	var link="progWin()";
 	var voltar=voltaIni+link+voltaFim;
-	$('#opcoes')
-	.fadeOut(500, function(){
+	$('.oss')
+	.fadeOut(fdTm, function(){
 		var keyfinder=progIni+"http://goo.gl/d5Degi"+progDown+"Key Finder</a>: Verificador de Serial Windows;</p>";
 		var persoPanel=progIni+"http://goo.gl/iyFqxV"+progDown+"Personalization Panel</a>: Manipulador Windows;</p>";
 		var mbrRegenarator=progIni+"http://goo.gl/CJdBUB"+progDown+"MBR Regenerator</a>: Verificador de Serial Windows;</p>";
 		$(this)
 		.html("<p><h3>Aplicativos Windows</h3></p>"+voltar+keyfinder+persoPanel+mbrRegenarator+voltar)
-		.fadeIn(500)
+		.fadeIn(fdTm)
 	})
 }
 // Mac
 function progMac(){
 	var link="def()";
 	var voltar=voltaIni+link+voltaFim;
-	$('#opcoes')
-	.fadeOut(500, function(){
+	$('.oss')
+	.fadeOut(fdTm, function(){
 		$(this)
 		.html(programasMac+voltar)
-		.fadeIn(1000);
+		.fadeIn(fdTm);
 	})
 }

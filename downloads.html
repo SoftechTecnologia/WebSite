@@ -33,6 +33,7 @@
 		<!--[if lte IE 9]>
 			<script>
 				alert("É recomendado que se utilize um navegador mais atualizado, pois esta versão do navegador não suporta todas as funcionalidades.");
+				location.href="http://www.google.com.br/chrome/browser/desktop/";
 			</script>
 		<![endif]-->
 		<style>
@@ -53,10 +54,10 @@
 				<fieldset id="texto" align="left">
 					<h3 align="center">Navegue abaixo para fazer os downloads</h3>
 					<span id="entrelinha">Todos os softwares aqui disponibilizados são gratuitos ou versão para testes.</span><br>
-					<div id="opcoes">
-						<p>- <a class='linkintext' onclick='progWin();'>Windows</a></p>
-						<p>- <a class='linkintext' onclick='progMac()'>Mac OS</a></p>
-						<p>- Linux: <a href='/fale-conosco.html' class='linkintext'>Diga-nos o que precisa!</a></p>
+					<div class="oss">
+						<p class="windows">- <a class='linkintext' onclick='progWin();'>Windows</a></p>
+						<p class="mac">- <a class='linkintext' onclick='progMac()'>Mac OS</a></p>
+						<p class="linux">- Linux: <a href='/fale-conosco.html' class='linkintext'>Diga-nos o que precisa!</a></p>
 					</div>
 				</fieldset>
 			</div>
