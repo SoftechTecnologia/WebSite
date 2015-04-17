@@ -1,5 +1,10 @@
 ﻿// Links da página
 var principal="/",sobreNos="/sobre-nos.html",produtosEServicos="/produtos-e-servicos",downloads="/downloads.html",fale="/fale-conosco.html",doeSangue="/promocoes/campanha-doe-sangue.html";
+// Redirec. IE
+function ie(){
+	alert("É recomendado que se utilize um navegador mais atualizado, pois esta versão do navegador não suporta todas as funcionalidades.");
+	location.href="http://www.google.com.br/chrome/browser/desktop/";
+}
 // Fade em todas as páginas
 $(document).ready(function (){
 	$('body').css('opacity', '0').fadeTo(250, 1,'swing');
