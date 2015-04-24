@@ -1,5 +1,6 @@
-﻿// Links da página
+﻿// Variáveis
 var principal="/",sobreNos="/sobre-nos.html",produtosEServicos="/produtos-e-servicos",downloads="/downloads.html",fale="/fale-conosco.html",doeSangue="/promocoes/campanha-doe-sangue.html";
+var fdTm=300;
 // Redirec. IE
 function ie(){
 	alert("É recomendado que se utilize um navegador mais atualizado, pois esta versão do navegador não suporta todas as funcionalidades.");
@@ -7,7 +8,7 @@ function ie(){
 }
 // Fade em todas as páginas
 $(document).ready(function (){
-	$('body').css('opacity', '0').fadeTo(250, 1,'swing');
+	$('body').css('opacity', '0').fadeTo(fdTm, 1,'swing');
 });
 // Link para abrir e pôr foco em chat
 function chatlink(){
@@ -67,7 +68,6 @@ var conjProgIni="<p>- <a class='linkintext' target='_blank' onclick='";
 var conjProgIr="' title='Clique para ir'>";
 var voltaIni="<p><img src='"+iconVoltar+"' width='15px' height='15px' /> <a class='linkintext' onclick='";
 var voltaFim="'>Voltar</a></p>";
-var fdTm=250;
 // Windows
 // Programas Windows
 var stSupport=progIni+"http://goo.gl/tcEqog"+progDown+"Suporte Softech</a>: Atalho aos nossos contatos;</p>";
@@ -75,7 +75,7 @@ var sevenZipConj=conjProgIni+"sZip()"+conjProgIr+"7-zip</a>: Manipulador de arqu
 var winProg=conjProgIni+"winApp()"+conjProgIr+"Apps Windows</a>: Programas de tratamento;</p>";//Função
 var acessoRemoto=conjProgIni+"remAcces()"+conjProgIr+"Acesso Remoto</a>: Programas de acesso remoto;</p>";
 var ccleaner=progIni+"http://goo.gl/cucP6P"+progDown+"CCleaner</a>: Otimizador de Sistema;</p>";
-var cdburner=progIni+"http://goo.gl/ZXoesq"+progDown+"CD Burner XP</a>: Gravador de Mídia;</p>";
+var cdburner=progIni+"http://goo.gl/817NGg"+progDown+"CD Burner XP</a>: Gravador de Mídia;</p>";
 var cpuz=progIni+"http://goo.gl/47fe47"+progDown+"CPU-Z</a>: Leitor de Hardware;</p>";
 var firefox=progIni+"http://goo.gl/ZuUODl"+progDown+"Firefox</a>: Navegador;</p>";
 var chrome=progIni+"http://goo.gl/N5lQIR"+progDown+"Chrome</a>: Navegador;</p>";
@@ -86,12 +86,14 @@ var mse=progIni+"http://goo.gl/HwjJbF"+progDown+"Microsoft Security Essentials</
 var nppp=progIni+"http://goo.gl/OIA2EJ"+progDown+"Notepad++</a>: Editor de texto avançado;</p>";
 var silverlight=progIni+"http://goo.gl/Dm9ZG0"+progDown+"Microsoft Silverlight</a>: Plugin para navegador;</p>";
 var pdfarc=progIni+"http://goo.gl/6W9zbn"+progDown+"PDF Architect</a>: Leitor/Editor de PDFs;</p>";
+var recuva=progIni+"http://goo.gl/9bnXxL"+progDown+"Recuva</a>: Recuperador de arquivos;</p>";
 var unlocker=progIni+"http://goo.gl/Y74RSS"+progDown+"Unlocker</a>: Manipulador de arquivos;</p>";
+var webCam=progIni+"http://goo.gl/lXEUJI"+progDown+"WebCam Viewer</a>: Software para WebCam;</p>";
 var utorrent=progIni+"http://goo.gl/t5dyx7"+progDown+"µTorrent</a>: Cliente BitTorrent;</p>";
-var programasWin=stSupport+sevenZipConj+winProg+acessoRemoto+ccleaner+cdburner+cpuz+firefox+chrome+hwmonitor+lofficeWin+mediaPlayerConj+mse+nppp+silverlight+pdfarc+unlocker+utorrent;
+var pWin=stSupport+sevenZipConj+winProg+acessoRemoto+ccleaner+cdburner+cpuz+firefox+chrome+hwmonitor+lofficeWin+mediaPlayerConj+mse+nppp+silverlight+pdfarc+recuva+unlocker+webCam+utorrent;
 // Programas Mac
 var lofficeMac=progIni+"http://goo.gl/nSeYxU"+progDown+"LibreOffice</a>: Pacote office (OS 10.8+);</p>";
-var programasMac=lofficeMac;
+var pMac=lofficeMac;
 function def(){
 	$('.oss')
 	.fadeOut(fdTm, function(){
@@ -120,7 +122,7 @@ function progWin(){
 	$('.oss')
 	.fadeOut(fdTm, function(){
 		$(this)
-		.html(voltar+programasWin+voltar)
+		.html(voltar+pWin+voltar)
 		.fadeIn(fdTm)
 	})
 }
@@ -180,7 +182,7 @@ function progMac(){
 	$('.oss')
 	.fadeOut(fdTm, function(){
 		$(this)
-		.html(programasMac+voltar)
+		.html(pMac+voltar)
 		.fadeIn(fdTm);
 	})
 }
