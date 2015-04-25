@@ -5,10 +5,14 @@
 		<meta name="description" content="Clique aqui para baixar programas e utilitários diversos." />
 		<meta name="author" content="Thiago Jourdan" />
 		<link rel="stylesheet" href="/css.css" />
+		<link rel="stylesheet" href="/downloads/css.css" />
 		<link rel="shortcut icon" href="/img/icon.ico" />
 		<title>Central de Downloads	- Softech</title>
 		<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 		<script src="/js.js"></script>
+		<script src="/downloads/var.js"></script>
+		<script src="/downloads/progs.js"></script>
+		<script src="/downloads/interface.js"></script>
 		<!-- Início do Chat Online -->
 		<script data-cfasync="false">
 			/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
@@ -52,8 +56,8 @@
 					<h3 align="center">Navegue abaixo para fazer os downloads</h3>
 					<span id="entrelinha">Todos os softwares aqui disponibilizados são gratuitos ou versão para testes.</span><br>
 					<div class="oss">
-						<p class="windows">- <a class='linkintext' onclick='progWin();'>Windows</a></p>
-						<p class="mac">- <a class='linkintext' onclick='progMac()'>Mac OS</a></p>
+						<p class="windows">- <a class='linkintext' onclick='page("win",1)'>Windows</a></p>
+						<p class="mac">- <a class='linkintext' onclick='page("mac",1)'>Mac OS</a></p>
 						<p class="linux">- Linux: <a href='/fale-conosco.html' class='linkintext'>Diga-nos o que precisa!</a></p>
 					</div>
 				</fieldset>
