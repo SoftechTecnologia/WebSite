@@ -9,10 +9,3 @@ var conjProgIr="' title='Clique para ir'>";
 var voltaIni="<p><a class='linkintext' onclick='";
 var voltaFim="'><img src='"+iconVoltar+"' width='15px' height='15px' /> Voltar</a>";
 var linkIni="<a class='linkintext avancar' onclick='";
-var linkIr=[
-	"",
-	"1)'>1</a>",
-	"2)'>2</a>",
-	"3)'>3</a>",
-	"4)'>4</a>",
-]

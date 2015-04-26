@@ -21,34 +21,23 @@ function def(){
 		.fadeIn(fdTm)
 	});
 }
-function page(sys,pag){
+function page(sys,pag,pagSys){
 	var linkV="def()";
 	var voltar=voltaIni+linkV+voltaFim;
-	if (sys=="win"){
-		var sys="win";
-		var ir=linkIni+"page(\""+sys+"\","+linkIr[4]+linkIni+"page(\""+sys+"\","+linkIr[3]+linkIni+"page(\""+sys+"\","+linkIr[2]+linkIni+"page(\""+sys+"\","+linkIr[1];
-		var navegacao=voltar+ir+"</p>";
-		$('.oss')
-		.fadeOut(fdTm, function(){
-			$(this)
-			.html("<p><h3>Página "+pag+"</h3></p>"+navegacao+pagW[pag]+navegacao)
-			.fadeIn(fdTm)
-		})
+	var ir=linkIni+"page(\""+sys+"\",0,"+pagSys+")'>1</a>";
+	for (i=1;i<=paginas[pagSys].length-1;i++){
+		ir=linkIni+"page(\""+sys+"\","+i+","+pagSys+")'>"+(i+1)+"</a>"+ir;
 	}
-	if(sys=="mac"){
-		var sys="mac";
-		var ir=linkIni+"page(\""+sys+"\","+linkIr[1];
-		var navegacao=voltar+ir+"</p>";
-		$('.oss')
-		.fadeOut(fdTm, function(){
-			$(this)
-			.html("<p><h3>Página "+pag+"</h3></p>"+navegacao+pagM[pag]+navegacao)
-			.fadeIn(fdTm);
-		})
-	}
+	var navegacao=voltar+ir+"</p>";
+	$('.oss')
+	.fadeOut(fdTm, function(){
+		$(this)
+		.html("<p><h3>Página "+(pag+1)+"</h3></p>"+navegacao+paginas[pagSys][pag]+navegacao)
+		.fadeIn(fdTm)
+	})
 }
-function remAcces(){
-	var linkV="pagWin(2)";
+function remAcces(page){
+	var linkV="page(\"win\","+page+",0)";
 	var voltar=voltaIni+linkV+voltaFim;
 	$('.oss')
 	.fadeOut(fdTm, function(){
@@ -59,8 +48,8 @@ function remAcces(){
 		.fadeIn(fdTm)
 	})
 }
-function sZip(){
-	var linkV="progWin()";
+function sZip(page){
+	var linkV="page(\"win\","+page+",0)";
 	var voltar=voltaIni+linkV+voltaFim;
 	$('.oss')
 	.fadeOut(fdTm, function(){
@@ -71,8 +60,8 @@ function sZip(){
 		.fadeIn(fdTm)
 	})
 }
-function mPlayer(){
-	var linkV="progWin()";
+function mPlayer(page){
+	var linkV="page(\"win\","+page+",0)";
 	var voltar=voltaIni+linkV+voltaFim;
 	$('.oss')
 	.fadeOut(fdTm, function(){
@@ -83,21 +72,26 @@ function mPlayer(){
 		.fadeIn(fdTm)
 	})
 }
-function winApp(){
-	var linkV="progWin()";
+function winApp(page){
+	var linkV="page(\"win\","+page+",0)";
 	var voltar=voltaIni+linkV+voltaFim;
 	$('.oss')
 	.fadeOut(fdTm, function(){
+		var keyfinder=progIni+"http://goo.gl/d5Degi"+progDown+"Key Finder</a>: Verificador de Serial Windows;</p>";
+		var persoPanel=progIni+"http://goo.gl/iyFqxV"+progDown+"Personalization Panel</a>: Manipulador Windows;</p>";
+		var mbrRegenarator=progIni+"http://goo.gl/CJdBUB"+progDown+"MBR Regenerator</a>: Verificador de Serial Windows;</p>";
 		$(this)
 		.html("<p><h3>Aplicativos Windows</h3></p>"+voltar+keyfinder+persoPanel+mbrRegenarator+voltar)
 		.fadeIn(fdTm)
 	})
 }
-function naveg(){
-	var linkV="progWin()";
+function naveg(page){
+	var linkV="page(\"win\","+page+",0)";
 	var voltar=voltaIni+linkV+voltaFim;
 	$('.oss')
 	.fadeOut(fdTm, function(){
+		var firefox=progIni+"http://goo.gl/ZuUODl"+progDown+"Firefox</a>: Navegador;</p>";
+		var chrome=progIni+"http://goo.gl/N5lQIR"+progDown+"Google Chrome</a>: Navegador;</p>";
 		$(this)
 		.html("<p><h3>Navegadores</h3></p>"+voltar+firefox+chrome+voltar)
 		.fadeIn(fdTm)
