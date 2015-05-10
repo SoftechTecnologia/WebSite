@@ -28,9 +28,10 @@ var progs=[
 		],[//Mac
 			progIni+"http://goo.gl/nSeYxU"+progDown+"LibreOffice</a>: Pacote office (OS 10.8+);</p>"
 		],[//Linux
+			"- <a href='/fale-conosco.html' class='linkintext'>Diga-nos o que precisa!</a>"
 		]
 	];
 // Páginas
 var numPag=0;
-var paginas=[[""],[""]];
+var paginas=[[""],[""],[""]];
 var itPorPag=6;
