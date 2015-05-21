@@ -52,7 +52,8 @@ body{
 #corpo #meio{
 	width:40%;
 	margin-top:50px;
-	float:left}
+	float:left;
+	transition:.3s}
 #corpo #direita{
 	width:29%;
 	margin-right:0;
@@ -106,9 +107,19 @@ body{
 	color:#5071F4;
 	background:#BDCBF9}/* Fim do Rodapé */
 /**** Classes e divs em geral ****/
-.img{
+.imgProf{
 	border-radius:10px;
 	width:50%}
+.imgDoeSangue{
+	width:70%;
+	padding:10px;
+	border-radius:5px;
+	background:#fff;
+	cursor:pointer;
+	transition:.3s}
+.imgDoeSangue:hover{
+	box-shadow:0 0 20px #fff;
+	transition:.3s}
 .far{margin-top:50px}
 /* Formulário de E-mail*/
 .field,#texto textarea,#texto select{

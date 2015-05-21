@@ -55,7 +55,7 @@ function remAcces(page){
 		var amAd=progIni+"http://goo.gl/fyPhxI"+progDown+"Ammyy Admin</a>;</p>";
 		var teamViewer=progIni+"http://goo.gl/53TnGK"+progDown+"TeamViewer</a>;</p>";
 		$(this)
-		.html("<p><h3>7-zip</h3></p>"+voltar+amAd+teamViewer+voltar)
+		.html("<p><h3>Acesso Remoto</h3></p>"+voltar+amAd+teamViewer+voltar)
 		.fadeIn(fdTm)
 	})
 }
