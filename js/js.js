@@ -32,9 +32,6 @@ var url_mobile='http://softechtecnologia.hol.es/m';
 ga('create', 'UA-54058374-1', 'auto');
 ga('send', 'pageview');
 // Requisições Ajax
-var msgErroIni="Ocorreu um erro ao inicializar ";
-var msgErroFim=". A página será recarregada";
-var msgExec=0;
 $(function(){
 	$.ajax({
 		url:'/index.html',
@@ -48,7 +45,7 @@ $(function(){
 	});
 	$.ajax({
 		url:'/index.html',
-		success: function(txtimg){txtimg=$(txtimg).find('#direita fieldset#texto');$('#direita').html(txtimg);},
+		success: function(direita){direita=$(direita).find('#direita fieldset#texto');$('#direita').html(direita);},
 		error: function(){if(msgExec==0){alert(msgErroIni+"a lateral direita"+msgErroFim);location.reload();msgExec++}}
 	});
 	$.ajax({

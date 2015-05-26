@@ -1,5 +1,11 @@
 // Links da página
-var principal="/m",sobreNos="/m/sobre-nos.html",produtosEServicos="/m/produtos-e-servicos",downloads="/m/downloads.html",fale="/m/fale-conosco.html";
+var
+principal="/m",
+sobreNos="/m/sobre-nos.html",
+produtosEServicos="/m/produtos-e-servicos",
+downloads="/m/downloads.html",
+fale="/m/fale-conosco.html",
+mandaMail="/m/envio-de-email/sendmail.php";
 // Fade em todas as páginas
 $(document).ready(function (){
 	$('body').css('opacity', '0').fadeTo(500, 1,'swing');
