@@ -1,6 +1,6 @@
 var progs=[
 		[// Windows
-			progIni+"http://goo.gl/tcEqog"+progDown+"Suporte Softech</a>: Atalho aos nossos contatos;</p>", // Hospedar arquivo no site // Página 1
+			progIni+"/downloads/progs/SuporteSoftech.zip"+progDown+"Suporte Softech</a>: Atalho aos nossos contatos;</p>", // Hospedar arquivo no site // Página 1
 			progIni+"http://goo.gl/9zP87C"+progDown+"7-zip</a>: Manipulador de arquivos compactos;</p>",
 			conjProgIni+"appsWin(0)"+conjProgIr+"Apps Windows</a>: Programas de tratamento;</p>", // Função
 			conjProgIni+"remAcces(0)"+conjProgIr+"Acesso Remoto</a>: Programas de acesso remoto;</p>", // Função
