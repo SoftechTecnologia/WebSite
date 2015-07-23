@@ -33,24 +33,31 @@ ga('create', 'UA-54058374-1', 'auto');
 ga('send', 'pageview');
 // Requisições Ajax
 $(function(){
-	$.ajax({
-		url:'/index.html',
-		success: function(topo){topo=$(topo).find('#bg-logo-softech, #menu');$('#topo').html(topo);},
-		error: function(){if(msgExec==0){alert(msgErroIni+"o topo"+msgErroFim);location.reload();msgExec++}}
-	});
-	$.ajax({
-		url:'/index.html',
-		success: function(esquerda){esquerda=$(esquerda).find('#esquerda #fb, #esquerda a');$('#corpo #esquerda').html(esquerda);},
-		error: function(){if(msgExec==0){alert(msgErroIni+"a lateral esquerda"+msgErroFim);location.reload();msgExec++}}
-	});
-	$.ajax({
-		url:'/index.html',
-		success: function(direita){direita=$(direita).find('#direita fieldset#texto');$('#direita').html(direita);},
-		error: function(){if(msgExec==0){alert(msgErroIni+"a lateral direita"+msgErroFim);location.reload();msgExec++}}
-	});
-	$.ajax({
-		url:'/index.html',
-		success: function(rodape){rodape=$(rodape).find('#rodapetext');$('#rodape').html(rodape);},
-		error: function(){if(msgExec==0){alert(msgErroIni+"o rodapé"+msgErroFim);location.reload();msgExec++}}
-	});
+	if(window.location.pathname!="/index.php"){
+		if(window.location.hostname=="localhost"||window.location.hostname=="127.0.0.1"){
+			var arquivoIndex="/site-softech/index.php";
+		}else{
+			var arquivoIndex="/index.php";
+		}
+		$.ajax({
+			url:arquivoIndex,
+			success: function(topo){topo=$(topo).find('#bg-logo-softech, #menu');$('header').html(topo);},
+			error: function(){if(msgExec==0){alert(msgErroIni+"o topo"+msgErroFim);location.reload();msgExec++}}
+		});
+		$.ajax({
+			url:arquivoIndex,
+			success: function(esquerda){esquerda=$(esquerda).find('#esquerda #fb, #esquerda a');$('#corpo #esquerda').html(esquerda);},
+			error: function(){if(msgExec==0){alert(msgErroIni+"a lateral esquerda"+msgErroFim);location.reload();msgExec++}}
+		});
+		$.ajax({
+			url:arquivoIndex,
+			success: function(direita){direita=$(direita).find('#direita fieldset#texto');$('#direita').html(direita);},
+			error: function(){if(msgExec==0){alert(msgErroIni+"a lateral direita"+msgErroFim);location.reload();msgExec++}}
+		});
+		$.ajax({
+			url:arquivoIndex,
+			success: function(rodape){rodape=$(rodape).find('.rodapeText');$('footer').html(rodape);},
+			error: function(){if(msgExec==0){alert(msgErroIni+"o rodapé"+msgErroFim);location.reload();msgExec++}}
+		});
+	}
 });

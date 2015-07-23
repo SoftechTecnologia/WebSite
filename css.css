@@ -6,7 +6,7 @@ body{
 	background:#E2E2E2;
 	overflow-x:hidden}
 /* Topo */
-#topo{width:100%; height:210px}
+header{width:100%; height:210px}
 #bg-logo-softech{
 	width:100%; height:150px;
 	padding:0px;
@@ -80,7 +80,7 @@ body{
 	transition:.3s;
 	cursor:pointer}/* Fim de Formas de Contato*//* Fim do Corpo */
 /* Rodapé */
-#rodape{
+footer{
 	margin-top:50px;
 	text-align:center;
 	width:100%; height:100px;
@@ -90,12 +90,12 @@ body{
 	cursor:default;
 	float:left;
 	overflow:hidden}
-#rodape span{
+footer span{
 	padding:5px;
 	vertical-align:-33px;
 	transition:.3s;
 	border-radius:5px}
-#rodape span:hover{
+footer span:hover{
 	transition:.3s;
 	color:#5071F4;
 	background:#BDCBF9}/* Fim do Rodapé */
