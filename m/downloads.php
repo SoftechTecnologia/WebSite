@@ -32,13 +32,13 @@
 			}
 		?>
 	</head>
-	<body class="shifter" style="width:100%">
+	<body class="shifter">
 		<div class="shifter-page">
 			<p class="shifter-handle"></p>
 			<div class="logo"></div>
 			<div class="meio">
-				<fieldset class="texto" style="margin-bottom:30px;">
-					<h2>Página não disponível na versão Mobile</h2>
+				<fieldset class="texto">
+					<h3>Página não disponível na versão Mobile</h3>
 					<p>Desculpe, mas esta página está disponível somente na versão "Desktop" desse site.</p>
 					<p>Entre no site a partir de um computador para ter acesso aos arquivos.</p>
 				</fieldset>
