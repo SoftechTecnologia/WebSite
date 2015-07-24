@@ -42,7 +42,7 @@
 						<li>Móvel Oi:<br><a class="linkintext">(85) 9 8562-3662</a></li>
 						<li>Móvel Tim:<br><a class="linkintext">(85) 9 9947-2102</a></li>
 						<li>Endereço (temporário):<br><a href="https://goo.gl/maps/TZMy4" target="_blank" title="Clique aqui e veja no mapa" class="linkintext">Rua Fagundes Varela, 817, Casa 7</a></li>
-						<li>E-mail:<br><a class="linkintext">adm@softechtecnologia.hol.es</a></li>
+						<li>E-mail:<br><a class="linkintext">softechtecnologia@gmail.com</a></li>
 					</ul>
 					<p>Contate-nos, também, pelo <a onclick="chatlink()" class="linkintext">Chat Online</a>.
 					Caso estejamos off-line, ou queira um atendimento registrado, preencha

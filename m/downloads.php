@@ -11,23 +11,23 @@
 		?>
 		<link rel="shortcut icon" href="<?php echo $pathLocal ?>/img/icon.ico" />
 		<script src="<?php echo $pathLocal ?>/js/jQuery.js"></script>
-		<script src="<?php echo $pathLocal ?>/m/js/var.js"></script>
 		<script src="<?php echo $pathLocal ?>/m/js/jquery.fs.shifter.js"></script>
+		<script src="<?php echo $pathLocal ?>/m/js/var.js"></script>
 		<script src="<?php echo $pathLocal ?>/m/js/js.js"></script>
+		<link rel="stylesheet" href="<?php echo $pathLocal ?>/m/jquery.fs.shifter.css" />
 		<link rel="stylesheet" href="<?php echo $pathLocal ?>/css.css" />
 		<link rel="stylesheet" href="<?php echo $pathLocal ?>/m/css.css" />
-		<link rel="stylesheet" href="<?php echo $pathLocal ?>/m/jquery.fs.shifter.css" />
 		<?php
 			}else{
 		?>
 		<link rel="shortcut icon" href="/img/icon.ico" />
 		<script src="/js/jQuery.js"></script>
-		<script src="/m/js/var.js"></script>
 		<script src="/m/js/jquery.fs.shifter.js"></script>
+		<script src="/m/js/var.js"></script>
 		<script src="/m/js/js.js"></script>
+		<link rel="stylesheet" href="/m/jquery.fs.shifter.css" />
 		<link rel="stylesheet" href="/css.css" />
 		<link rel="stylesheet" href="/m/css.css" />
-		<link rel="stylesheet" href="/m/jquery.fs.shifter.css" />
 		<?php
 			}
 		?>
