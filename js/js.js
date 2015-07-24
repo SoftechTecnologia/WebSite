@@ -7,6 +7,23 @@ function ie(){
 	alert("É recomendado que se utilize um navegador mais atualizado, pois esta versão do navegador não suporta todas as funcionalidades.");
 	location.href="http://www.google.com.br/chrome/browser/desktop/";
 }
+// Enviar e-mail
+function verificaEmail(){
+	if($('#email').val()==$('#confirmaEmail').val()){
+		$('#confirmaEmail').removeClass('incorrect');
+	}else{
+		$('#confirmaEmail').addClass('incorrect');
+	}
+}
+function enviarEmail(){
+	if($('#confirmaEmail').hasClass('incorrect')){
+		alert("A confirmação de email está incorreta!");
+		$('#confirmaEmail').focus();
+		$('.formEmail').submit(function(e){e.preventDefault()});
+	}else{
+		$('.formEmail').attr('action',mandaMail).unbind('submit').submit();
+	}
+}
 // Link para abrir e pôr foco em chat
 function chatlink(){
 	$('#habla_oplink_a').click();
@@ -33,31 +50,94 @@ ga('create', 'UA-54058374-1', 'auto');
 ga('send', 'pageview');
 // Requisições Ajax
 $(function(){
-	if(window.location.pathname!="/index.php"){
-		if(window.location.hostname=="localhost"||window.location.hostname=="127.0.0.1"){
-			var arquivoIndex="/site-softech/index.php";
-		}else{
+	switch(window.location.pathname){
+		case pathLocal+"/index.php":
+		case pathLocal+"/":
+		case "/index.php":
+		case "/": break;
+		default:
 			var arquivoIndex="/index.php";
-		}
-		$.ajax({
-			url:arquivoIndex,
-			success: function(topo){topo=$(topo).find('#bg-logo-softech, #menu');$('header').html(topo);},
-			error: function(){if(msgExec==0){alert(msgErroIni+"o topo"+msgErroFim);location.reload();msgExec++}}
-		});
-		$.ajax({
-			url:arquivoIndex,
-			success: function(esquerda){esquerda=$(esquerda).find('#esquerda #fb, #esquerda a');$('#corpo #esquerda').html(esquerda);},
-			error: function(){if(msgExec==0){alert(msgErroIni+"a lateral esquerda"+msgErroFim);location.reload();msgExec++}}
-		});
-		$.ajax({
-			url:arquivoIndex,
-			success: function(direita){direita=$(direita).find('#direita fieldset#texto');$('#direita').html(direita);},
-			error: function(){if(msgExec==0){alert(msgErroIni+"a lateral direita"+msgErroFim);location.reload();msgExec++}}
-		});
-		$.ajax({
-			url:arquivoIndex,
-			success: function(rodape){rodape=$(rodape).find('.rodapeText');$('footer').html(rodape);},
-			error: function(){if(msgExec==0){alert(msgErroIni+"o rodapé"+msgErroFim);location.reload();msgExec++}}
-		});
+			if(window.location.hostname=="localhost"||window.location.hostname=="127.0.0.1"){
+				var arquivoIndex=pathLocal+arquivoIndex;
+			}
+			$.ajax({
+				url:arquivoIndex,
+				success: function(topo){topo=$(topo).find('.bg-logo-softech, nav');$('header').html(topo);},
+				error: function(){if(msgExec==0){alert(msgErroIni+"o topo"+msgErroFim);location.reload();msgExec++}}
+			});
+			$.ajax({
+				url:arquivoIndex,
+				success: function(esquerda){esquerda=$(esquerda).find('.esquerda iframe, .esquerda a');$('.corpo .esquerda').html(esquerda);},
+				error: function(){if(msgExec==0){alert(msgErroIni+"a lateral esquerda"+msgErroFim);location.reload();msgExec++}}
+			});
+			$.ajax({
+				url:arquivoIndex,
+				success: function(direita){direita=$(direita).find('.direita fieldset.texto');$('.direita').html(direita);},
+				error: function(){if(msgExec==0){alert(msgErroIni+"a lateral direita"+msgErroFim);location.reload();msgExec++}}
+			});
+			$.ajax({
+				url:arquivoIndex,
+				success: function(rodape){rodape=$(rodape).find('.rodapeText');$('footer').html(rodape);},
+				error: function(){if(msgExec==0){alert(msgErroIni+"o rodapé"+msgErroFim);location.reload();msgExec++}}
+			});
+		break;
 	}
 });
+// Chat Olark
+/*<![CDATA[*/window.olark||(function(c){
+	var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";
+	var nt=function(){
+		f[z]=function(){(a.s=a.s||[]).push(arguments)};
+		var a=f[z]._={},q=c.methods.length;
+		while(q--){(
+			function(n){
+				f[z][n]=function(){f[z]("call",n,arguments)}
+			}
+		)(c.methods[q])}
+		a.l=c.loader;
+		a.i=nt;
+		a.p={0:+new Date};
+		a.P=function(u){a.p[u]=new Date-a.p[0]};
+		function s(){
+			a.P(r);
+			f[z](r)
+		}
+		f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);
+		var ld=function(){
+			function p(hd){
+				hd="head";
+				return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")
+			}
+			var i="body",m=d[i];
+			if(!m){return setTimeout(ld,100)}
+			a.P(1);
+			var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;
+			n.style.display="none";
+			m.insertBefore(n,m.firstChild).id=z;
+			b.frameBorder="0";
+			b.id=z+"-loader";
+			if(/MSIE[ ]+6/.test(navigator.userAgent)){b.src="javascript:false"}
+			b.allowTransparency="true";
+			v[j](b);
+			try{b.contentWindow[g].open()}
+			catch(w){
+				c[e]=d[e];
+				o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";
+				b[k]=o+"void(0);"
+			}
+			try{
+				var t=b.contentWindow[g];
+				t.write(p());
+				t.close()
+			}
+			catch(x){
+				b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'
+			}
+			a.P(2)};
+			ld()
+	};
+	nt()
+})
+({loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+/* custom configuration goes here (www.olark.com/documentation) */
+olark.identify('7364-449-10-2021');/*]]>*/

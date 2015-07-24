@@ -1,7 +1,10 @@
 function def(){//Página default
 	$('.oss')
 	.fadeOut(fdTm, function(){
-		var path="/downloads/index.html";
+		var path="/downloads/index.php";
+		if(window.location.hostname=="localhost"||window.location.hostname=="127.0.0.1"){
+			path=pathLocal+path;
+		}
 		$.ajax({
 			url:path,
 			success: function(windows){windows=$(windows).find('.windows');$('.oss').html(windows);},
