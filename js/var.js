@@ -1,6 +1,7 @@
 ﻿// Navegação
 var
 pathLocal="/site-softech",
+siteSoftech="http://www.softech.hol.es"
 principal="/",
 sobreNos="/sobre-nos.php",
 produtosEServicos="/produtos-e-servicos",

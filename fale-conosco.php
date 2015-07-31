@@ -1,38 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8" />
+		<?php require_once('pageContents/head.php'); ?>
 		<meta name="description" content="Não hesite em nos contatar para obter um serviço especializado em informática. Clique aqui e solicite manutenção em Microcomputadores, Notebooks e Netbooks!" />
-		<meta name="author" content="Thiago Jourdan" />
 		<title>Fale Conosco - Softech</title>
-		<?php
-			$pathLocal="/site-softech";
-			if($_SERVER['SERVER_ADDR']=='::1'||$_SERVER['SERVER_ADDR']=='127.0.0.1'){
-		?>
-		<link rel="stylesheet" href="<?php echo $pathLocal ?>/css.css" />
-		<link rel="shortcut icon" href="<?php echo $pathLocal ?>/img/icon.ico" />
-		<script src="<?php echo $pathLocal ?>/js/jQuery.js"></script>
-		<script src="<?php echo $pathLocal ?>/js/var.js"></script>
-		<script src="<?php echo $pathLocal ?>/js/js.js"></script>
-		<?php
-			}else{
-		?>
-		<link rel="stylesheet" href="/css.css" />
-		<link rel="shortcut icon" href="/img/icon.ico" />
-		<script src="/js/jQuery.js"></script>
-		<script src="/js/var.js"></script>
-		<script src="/js/js.js"></script>
-		<?php
-			}
-		?>
 		<!--[if lte IE 9]>
 			<script>ie();</script>
 		<![endif]-->
 	</head>
 	<body>
-		<header></header><!-- Copiado de index.html -->
+		<header><?php require_once('pageContents/header.php'); ?></header>
 		<div class="corpo">
-			<div class="esquerda"></div><!-- Copiado de index.html -->
+			<div class="esquerda"><?php require_once('pageContents/corpoEsquerda.php'); ?></div>
 			<div class="meio">
 				<fieldset class="texto">
 					<h3>Fale Conosco!</h3>
@@ -50,9 +29,8 @@
 					o mais breve possível.</p>
 				</fieldset>
 			</div>
-			<div class="direita"></div><!-- Copiado de index.html -->
-		</div>
+			<div class="direita"><?php require_once('pageContents/corpoDireita.php'); ?></div>
 		</div><!-- Corpo -->
-		<footer></footer><!-- Copiado de index.html -->
+		<footer><?php require_once('pageContents/footer.php'); ?></footer>
 	</body>
 </html>

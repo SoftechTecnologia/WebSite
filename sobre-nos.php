@@ -1,38 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8" />
+		<?php require_once('pageContents/head.php'); ?>
 		<meta name="description" content="Clique aqui e saiba um pouco sobre a empresa Softech e seu método de trabalho." />
-		<meta name="author" content="Thiago Jourdan" />
 		<title>Sobre nós - Softech</title>
-		<?php
-			$pathLocal="/site-softech";
-			if($_SERVER['SERVER_ADDR']=='::1'||$_SERVER['SERVER_ADDR']=='127.0.0.1'){
-		?>
-		<link rel="stylesheet" href="<?php echo $pathLocal ?>/css.css" />
-		<link rel="shortcut icon" href="<?php echo $pathLocal ?>/img/icon.ico" />
-		<script src="<?php echo $pathLocal ?>/js/jQuery.js"></script>
-		<script src="<?php echo $pathLocal ?>/js/var.js"></script>
-		<script src="<?php echo $pathLocal ?>/js/js.js"></script>
-		<?php
-			}else{
-		?>
-		<link rel="stylesheet" href="/css.css" />
-		<link rel="shortcut icon" href="/img/icon.ico" />
-		<script src="/js/jQuery.js"></script>
-		<script src="/js/var.js"></script>
-		<script src="/js/js.js"></script>
-		<?php
-			}
-		?>
 		<!--[if lte IE 9]>
 			<script>ie();</script>
 		<![endif]-->
 	</head>
 	<body>
-		<header></header><!-- Copiado de index.html -->
+		<header><?php require_once('pageContents/header.php'); ?></header>
 		<div class="corpo">
-			<div class="esquerda"></div><!-- Copiado de index.html -->
+			<div class="esquerda"><?php require_once('pageContents/corpoEsquerda.php'); ?></div>
 			<div class="meio">
 				<fieldset class="texto">
 					<h3>Breve história</h3>
@@ -60,8 +39,8 @@
 					<p>Por este motivo, a palavra <b>honestidade</b> foi citada várias vezes. Nos baseamos em <b>honestidade</b> ao trabalhar para você.</p>
 				</fieldset>
 			</div>
-			<div class="direita"></div><!-- Copiado de index.html -->
+			<div class="direita"><?php require_once('pageContents/corpoDireita.php'); ?></div>
 		</div><!-- Corpo -->
-		<footer></footer><!-- Copiado de index.html -->
+		<footer><?php require_once('pageContents/footer.php'); ?></footer>
 	</body>
 </html>

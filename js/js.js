@@ -1,7 +1,11 @@
 ﻿$(document).ready(function (){
-	// Fade em todas as páginas
+	// Fade In em todas as páginas
 	$('body').css('opacity', '0').fadeTo(fdTm, 1,'swing');
 });
+window.onbeforeunload=function (){
+	// Fade Out em todas as páginas
+	$('body').css('opacity', '1').fadeTo(fdTm, 0,'swing');
+};
 // Redirec. IE
 function ie(){
 	alert("É recomendado que se utilize um navegador mais atualizado, pois esta versão do navegador não suporta todas as funcionalidades.");
@@ -21,7 +25,7 @@ function enviarEmail(){
 		$('#confirmaEmail').focus();
 		$('.formEmail').submit(function(e){e.preventDefault()});
 	}else{
-		$('.formEmail').attr('action',mandaMail).unbind('submit').submit();
+		$('.formEmail').attr('action',mandaMail).unbind('submit');
 	}
 }
 // Link para abrir e pôr foco em chat
@@ -48,41 +52,6 @@ var url_mobile='http://softechtecnologia.hol.es/m';
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 ga('create', 'UA-54058374-1', 'auto');
 ga('send', 'pageview');
-// Requisições Ajax
-$(function(){
-	switch(window.location.pathname){
-		case pathLocal+"/index.php":
-		case pathLocal+"/":
-		case "/index.php":
-		case "/": break;
-		default:
-			var arquivoIndex="/index.php";
-			if(window.location.hostname=="localhost"||window.location.hostname=="127.0.0.1"){
-				var arquivoIndex=pathLocal+arquivoIndex;
-			}
-			$.ajax({
-				url:arquivoIndex,
-				success: function(topo){topo=$(topo).find('.bg-logo-softech, nav');$('header').html(topo);},
-				error: function(){if(msgExec==0){alert(msgErroIni+"o topo"+msgErroFim);location.reload();msgExec++}}
-			});
-			$.ajax({
-				url:arquivoIndex,
-				success: function(esquerda){esquerda=$(esquerda).find('.esquerda iframe, .esquerda a');$('.corpo .esquerda').html(esquerda);},
-				error: function(){if(msgExec==0){alert(msgErroIni+"a lateral esquerda"+msgErroFim);location.reload();msgExec++}}
-			});
-			$.ajax({
-				url:arquivoIndex,
-				success: function(direita){direita=$(direita).find('.direita fieldset.texto');$('.direita').html(direita);},
-				error: function(){if(msgExec==0){alert(msgErroIni+"a lateral direita"+msgErroFim);location.reload();msgExec++}}
-			});
-			$.ajax({
-				url:arquivoIndex,
-				success: function(rodape){rodape=$(rodape).find('.rodapeText');$('footer').html(rodape);},
-				error: function(){if(msgExec==0){alert(msgErroIni+"o rodapé"+msgErroFim);location.reload();msgExec++}}
-			});
-		break;
-	}
-});
 // Chat Olark
 /*<![CDATA[*/window.olark||(function(c){
 	var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";
@@ -133,11 +102,21 @@ $(function(){
 			catch(x){
 				b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'
 			}
-			a.P(2)};
-			ld()
-	};
+			a.P(2)
+		}
+		ld()
+	}
 	nt()
 })
-({loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+({
+	loader:"static.olark.com/jsclient/loader0.js",
+	name:"olark",
+	methods:[
+		"configure",
+		"extend",
+		"declare",
+		"identify"
+	]
+});
 /* custom configuration goes here (www.olark.com/documentation) */
 olark.identify('7364-449-10-2021');/*]]>*/
