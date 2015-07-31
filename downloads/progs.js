@@ -15,16 +15,18 @@ var progs=[
 			progIni+"http://goo.gl/cucP6P"+progDown+"CCleaner</a>: Otimizador de Sistema;</p>", // 1
 			progIni+"http://goo.gl/817NGg"+progDown+"CD Burner XP</a>: Gravador de Mídia;</p>", // 2
 			progIni+"http://goo.gl/SKcB69"+progDown+"CPU-Z</a>: Leitor de Hardware;</p>", // 3
-			progIni+"http://goo.gl/SYlsLb"+progDown+"HWMonitor</a>: Leitor de Hardware;</p>", // 4
-			progIni+"https://goo.gl/rPjCUc"+progDown+"Media Player Classic</a>: Player de vídeo;</p>", // 5
-			progIni+"http://goo.gl/rG77Yt"+progDown+"Microsoft Security Essentials</a>: Antivírus da Microsoft (Windows 7);</p>", // 6
+			progIni+"https://goo.gl/rNbpLt"+progDown+"Google App Launcher</a>: Menu de aplicativos Google;</p>", // 4
+			progIni+"http://goo.gl/SYlsLb"+progDown+"HWMonitor</a>: Leitor de Hardware;</p>", // 5
+			progIni+"https://goo.gl/rPjCUc"+progDown+"Media Player Classic</a>: Player de vídeo;</p>", // 6
 			// Página 3
-			progIni+"https://goo.gl/YWvVRu"+progDown+"Notepad++</a>: Editor de texto avançado;</p>", // 1
-			progIni+"https://goo.gl/v988qM"+progDown+"Microsoft Silverlight</a>: Plugin para navegador;</p>", // 2
-			progIni+"https://goo.gl/3tCvk9"+progDown+"Recuva</a>: Recuperador de arquivos;</p>", // 3
-			progIni+"http://goo.gl/0pFYW8"+progDown+"Unlocker</a>: Manipulador de arquivos;</p>", // 4
-			progIni+"http://goo.gl/2N6wyO"+progDown+"WebCam Viewer</a>: Software para WebCam;</p>", // 5
-			progIni+"http://goo.gl/8udqEp"+progDown+"µTorrent</a>: Cliente BitTorrent;</p>" // 6
+			progIni+"http://goo.gl/rG77Yt"+progDown+"Microsoft Security Essentials</a>: Antivírus da Microsoft (Windows 7);</p>", // 1
+			progIni+"https://goo.gl/YWvVRu"+progDown+"Notepad++</a>: Editor de texto avançado;</p>", // 2
+			progIni+"https://goo.gl/v988qM"+progDown+"Microsoft Silverlight</a>: Plugin para navegador;</p>", // 3
+			progIni+"https://goo.gl/3tCvk9"+progDown+"Recuva</a>: Recuperador de arquivos;</p>", // 4
+			progIni+"unlocker(2)"+progDown+"Unlocker</a>: Manipulador de arquivos;</p>", // 5 Função
+			progIni+"http://goo.gl/2N6wyO"+progDown+"WebCam Viewer</a>: Software para WebCam;</p>", // 6
+			// Página 4
+			progIni+"http://goo.gl/8udqEp"+progDown+"µTorrent</a>: Cliente BitTorrent;</p>" // 1
 		],[//Mac
 			"- <a href='/fale-conosco.html' class='linkintext'>Diga-nos o que precisa!</a>"
 		],[//Linux

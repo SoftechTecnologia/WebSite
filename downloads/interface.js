@@ -69,7 +69,7 @@ function remAcces(page){
 	$('.oss')
 	.fadeOut(fdTm, function(){
 		var amAd=progIni+"http://goo.gl/D9urea"+progDown+"Ammyy Admin</a>;</p>";
-		var teamViewer=progIni+"https://goo.gl/ZWkdK9"+progDown+"TeamViewer</a>;</p>";
+		var teamViewer=progIni+"https://www.teamviewer.com/"+progDown+"TeamViewer</a>;</p>"; // Encurtador Google não suportou o link
 		var crd=progIni+"https://goo.gl/6DYhTZ"+progDown+"Chrome Remote Desktop</a> (Navegador \"Chrome\" requerido).</p>";
 		$(this)
 		.html("<p><h3>Acesso Remoto</h3></p>"+voltar+amAd+teamViewer+crd+voltar)
@@ -86,6 +86,31 @@ function browsers(page){
 		var op=progIni+"http://goo.gl/msTkIb"+progDown+"Opera</a>;</p>";
 		$(this)
 		.html("<p><h3>Browsers</h3></p>"+voltar+ff+gc+op+voltar)
+		.fadeIn(fdTm)
+	})
+}
+function unlocker(page){
+	var linkV="page(0,"+page+")";
+	var voltar=voltaIni+linkV+voltaFim;
+	$('.oss')
+	.fadeOut(fdTm, function(){
+		var x86=progIni+"http://goo.gl/0pFYW8"+progDown+"32 bits</a>;</p>";
+		var x64=progIni+"http://goo.gl/ITWKPE"+progDown+"64 bits</a>;</p>";
+		$(this)
+		.html("<p><h3>Unlocker</h3></p>"+voltar+ff+gc+op+voltar)
+		.fadeIn(fdTm)
+	})
+}
+function SOs(page){
+	var linkV="page(0,"+page+")";
+	var voltar=voltaIni+linkV+voltaFim;
+	$('.oss')
+	.fadeOut(fdTm, function(){
+		var win10=progIni+"#"+progDown+"Windows 10</a>;</p>";
+		var win8=progIni+"#"+progDown+"Windows 8</a>;</p>";
+		var win7=progIni+"#"+progDown+"Windows 7</a>;</p>";
+		$(this)
+		.html("<p><h3>Windows</h3></p>"+voltar+win10+win8+win7+voltar)
 		.fadeIn(fdTm)
 	})
 }
