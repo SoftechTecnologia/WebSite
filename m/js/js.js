@@ -1,30 +1,43 @@
-// Links da página
-var
-principal="/m",
-sobreNos="/m/sobre-nos.html",
-produtosEServicos="/m/produtos-e-servicos",
-downloads="/m/downloads.html",
-fale="/m/fale-conosco.html",
-mandaMail="/m/envio-de-email/sendmail.php";
 // Fade em todas as páginas
 $(document).ready(function (){
-	$('body').css('opacity', '0').fadeTo(500, 1,'swing');
+	$('body').css('opacity', '0').fadeTo(400, 1,'swing');
 });
 // Componentes
 $(function(){
+	var path="/index.php";
+	if(window.location.hostname=="localhost"||window.location.hostname=="127.0.0.1"){
+		path=pathLocal+path;
+	}
 	$.ajax({
-		url:'/index.html',
-		success: function(topo){topo=$(topo).find('#bg-logo-softech');$('#logo').html(topo);},
-		error: function(){alert('Ocorreu um erro ao inicializar o site. \u00c9 preciso atualizar a p\u00e1gina.');}
+		url:path,
+		success: function(topo){topo=$(topo).find('.bg-logo-softech');$('.logo').html(topo);},
+		error: function(){alert('Ocorreu um erro ao inicializar o site. É preciso atualizar a página.');}
 	});
 	$.ajax({
-		url:'/index.html',
-		success: function(topo){topo=$(topo).find('#menu');$('nav.shifter-navigation').html(topo);},
-		error: function(){alert('Ocorreu um erro ao inicializar o site. \u00c9 preciso atualizar a p\u00e1gina.');}
+		url:path,
+		success: function(topo){topo=$(topo).find('nav').children();$('nav.shifter-navigation').html(topo);},
+		error: function(){alert('Ocorreu um erro ao inicializar o site. É preciso atualizar a página.');}
 	});
 	$.ajax({
-		url:'/index.html',
-		success: function(rodape){rodape=$(rodape).find('#rodapetext');$('#rodape').html(rodape);},
-		error: function(){alert('Ocorreu um erro ao inicializar o site. \u00c9 preciso atualizar a p\u00e1gina.');}
+		url:path,
+		success: function(rodape){rodape=$(rodape).find('.rodapeText');$('footer').html(rodape);},
+		error: function(){alert('Ocorreu um erro ao inicializar o site. É preciso atualizar a página.');}
 	});
 });
+// Enviar e-mail
+function verificaEmail(){
+	if($('#email').val()==$('#confirmaEmail').val()){
+		$('#confirmaEmail').removeClass('incorrect');
+	}else{
+		$('#confirmaEmail').addClass('incorrect');
+	}
+}
+function enviarEmail(){
+	if($('#confirmaEmail').hasClass('incorrect')){
+		alert("A confirmação de email está incorreta!");
+		$('#confirmaEmail').focus();
+		$('.formEmail').submit(function(e){e.preventDefault()});
+	}else{
+		$('.formEmail').attr('action',mandaMail).unbind('submit').submit();
+	}
+}

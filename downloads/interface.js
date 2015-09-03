@@ -1,21 +1,24 @@
 function def(){//Página default
 	$('.oss')
 	.fadeOut(fdTm, function(){
-		var path="/downloads/index.html";
+		var path="/downloads/index.php";
+		if(window.location.hostname=="localhost"||window.location.hostname=="127.0.0.1"){
+			path=pathLocal+path;
+		}
 		$.ajax({
 			url:path,
 			success: function(windows){windows=$(windows).find('.windows');$('.oss').html(windows);},
-			error: function(){alert('Ocorreu um erro ao inicializar o site. \u00c9 preciso atualizar a p\u00e1gina.');}
+			error: function(){alert('Ocorreu um erro ao inicializar o site. É preciso atualizar a página.');location.href="/downloads";}
 		});
 		$.ajax({
 			url:path,
 			success: function(mac){mac=$(mac).find('.mac');$('.oss').append(mac);},
-			error: function(){alert('Ocorreu um erro ao inicializar o site. \u00c9 preciso atualizar a p\u00e1gina.');}
+			error: function(){alert('Ocorreu um erro ao inicializar o site. É preciso atualizar a página.');location.href="/downloads";}
 		});
 		$.ajax({
 			url:path,
 			success: function(linux){linux=$(linux).find('.linux');$('.oss').append(linux);},
-			error: function(){alert('Ocorreu um erro ao inicializar o site. \u00c9 preciso atualizar a p\u00e1gina.');}
+			error: function(){alert('Ocorreu um erro ao inicializar o site. É preciso atualizar a página.');location.href="/downloads";}
 		});
 		$(this)
 		.fadeIn(fdTm)
@@ -47,64 +50,29 @@ function pegaPag(sys){//Itens da página
 		}
 	}
 }
-function remAcces(page){
-	var linkV="page(0,"+page+")";
-	var voltar=voltaIni+linkV+voltaFim;
-	$('.oss')
-	.fadeOut(fdTm, function(){
-		var amAd=progIni+"http://goo.gl/fyPhxI"+progDown+"Ammyy Admin</a>;</p>";
-		var teamViewer=progIni+"http://goo.gl/53TnGK"+progDown+"TeamViewer</a>;</p>";
-		$(this)
-		.html("<p><h3>Acesso Remoto</h3></p>"+voltar+amAd+teamViewer+voltar)
-		.fadeIn(fdTm)
-	})
-}
-function sZip(page){
-	var linkV="page(0,"+page+")";
-	var voltar=voltaIni+linkV+voltaFim;
-	$('.oss')
-	.fadeOut(fdTm, function(){
-		var sZip86=progIni+"http://goo.gl/eSFSgn"+progDown+"Versão de 32 bits (x86)</a></p>";
-		var sZip64=progIni+"http://goo.gl/EZfmBV"+progDown+"Versão de 64 bits (x64)</a></p>";
-		$(this)
-		.html("<p><h3>7-zip</h3></p>"+voltar+sZip86+sZip64+voltar)
-		.fadeIn(fdTm)
-	})
-}
-function mpc(page){
-	var linkV="page(0,"+page+")";
-	var voltar=voltaIni+linkV+voltaFim;
-	$('.oss')
-	.fadeOut(fdTm, function(){
-		var mpc86=progIni+"http://goo.gl/EDQKJn"+progDown+"Versão de 32 bits (x86)</a></p>";
-		var mpc64=progIni+"http://goo.gl/CMnZtu"+progDown+"Versão de 64 bits (x64)</a></p>";
-		$(this)
-		.html("<p><h3>Media Player Classic</h3></p>"+voltar+mpc86+mpc64+voltar)
-		.fadeIn(fdTm)
-	})
-}
-function mse(page){
-	var linkV="page(0,"+page+")";
-	var voltar=voltaIni+linkV+voltaFim;
-	$('.oss')
-	.fadeOut(fdTm, function(){
-		var mse86=progIni+"http://goo.gl/yWxgG9"+progDown+"Versão de 32 bits (x86)</a></p>";
-		var mse64=progIni+"http://goo.gl/Ta1FJr"+progDown+"Versão de 64 bits (x64)</a></p>";
-		$(this)
-		.html("<p><h3>Microsoft Security Essentials</h3></p>"+voltar+mse86+mse64+voltar)
-		.fadeIn(fdTm)
-	})
-}
 function appsWin(page){
 	var linkV="page(0,"+page+")";
 	var voltar=voltaIni+linkV+voltaFim;
 	$('.oss')
 	.fadeOut(fdTm, function(){
-		var kF=progIni+"http://goo.gl/d5Degi"+progDown+"Key Finder</a>: Verificador de Serial Windows;</p>";
-		var pP=progIni+"http://goo.gl/iyFqxV"+progDown+"Personalization Panel</a>: Manipulador Windows;</p>";
-		var mbrR=progIni+"http://goo.gl/CJdBUB"+progDown+"MBR Regenerator</a>: Verificador de Serial Windows;</p>";
+		var kF=progIni+"https://goo.gl/JIXKvt"+progDown+"Key Finder</a>: Verificador de Serial Windows;</p>";
+		var pP=progIni+"http://goo.gl/YnWkST"+progDown+"Personalization Panel</a>: Manipulador Windows;</p>";
+		var mbrR=progIni+"http://goo.gl/84Mn55"+progDown+"MBR Regenerator</a>: Verificador de Serial Windows;</p>";
 		$(this)
 		.html("<p><h3>Aplicativos Windows</h3></p>"+voltar+kF+pP+mbrR+voltar)
+		.fadeIn(fdTm)
+	})
+}
+function remAcces(page){
+	var linkV="page(0,"+page+")";
+	var voltar=voltaIni+linkV+voltaFim;
+	$('.oss')
+	.fadeOut(fdTm, function(){
+		var amAd=progIni+"http://goo.gl/D9urea"+progDown+"Ammyy Admin</a>;</p>";
+		var teamViewer=progIni+"https://www.teamviewer.com/"+progDown+"TeamViewer</a>;</p>"; // Encurtador Google não suportou o link
+		var crd=progIni+"https://goo.gl/6DYhTZ"+progDown+"Chrome Remote Desktop</a> (Navegador \"Chrome\" requerido).</p>";
+		$(this)
+		.html("<p><h3>Acesso Remoto</h3></p>"+voltar+amAd+teamViewer+crd+voltar)
 		.fadeIn(fdTm)
 	})
 }
@@ -113,10 +81,36 @@ function browsers(page){
 	var voltar=voltaIni+linkV+voltaFim;
 	$('.oss')
 	.fadeOut(fdTm, function(){
-		var ff=progIni+"http://goo.gl/ZuUODl"+progDown+"Firefox</a>: Navegador;</p>";
-		var gc=progIni+"http://goo.gl/N5lQIR"+progDown+"Google Chrome</a>: Navegador;</p>";
+		var ff=progIni+"https://goo.gl/UmtZ3Z"+progDown+"Firefox</a>;</p>";
+		var gc=progIni+"http://goo.gl/WGphk6"+progDown+"Google Chrome</a>;</p>";
+		var op=progIni+"http://goo.gl/msTkIb"+progDown+"Opera</a>;</p>";
 		$(this)
-		.html("<p><h3>Browsers</h3></p>"+voltar+ff+gc+voltar)
+		.html("<p><h3>Browsers</h3></p>"+voltar+ff+gc+op+voltar)
+		.fadeIn(fdTm)
+	})
+}
+function unlocker(page){
+	var linkV="page(0,"+page+")";
+	var voltar=voltaIni+linkV+voltaFim;
+	$('.oss')
+	.fadeOut(fdTm, function(){
+		var x86=progIni+"http://goo.gl/0pFYW8"+progDown+"32 bits</a>;</p>";
+		var x64=progIni+"http://goo.gl/ITWKPE"+progDown+"64 bits</a>;</p>";
+		$(this)
+		.html("<p><h3>Unlocker</h3></p>"+voltar+ff+gc+op+voltar)
+		.fadeIn(fdTm)
+	})
+}
+function SOs(page){
+	var linkV="page(0,"+page+")";
+	var voltar=voltaIni+linkV+voltaFim;
+	$('.oss')
+	.fadeOut(fdTm, function(){
+		var win10=progIni+"#"+progDown+"Windows 10</a>;</p>";
+		var win8=progIni+"#"+progDown+"Windows 8</a>;</p>";
+		var win7=progIni+"#"+progDown+"Windows 7</a>;</p>";
+		$(this)
+		.html("<p><h3>Windows</h3></p>"+voltar+win10+win8+win7+voltar)
 		.fadeIn(fdTm)
 	})
 }

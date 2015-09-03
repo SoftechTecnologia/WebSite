@@ -1,20 +1,20 @@
 <?php
-$accesstype="Mobile";
-$myemail="adm@softechtecnologia.hol.es";
-$name=$_POST['name'];
-$senderemail=$_POST['email'];
-$subject=$_POST['subject'];
-$message=$_POST['message'];
-$emailmessage="Este é um contato realizado através da versão $accesstype do site \"www.softechtecnologia.hol.es\", por $name, com as seguintes informações:\n\nNome: $name\nE-mail: $senderemail\nAssunto: $subject\n\nMensagem: $message";
-if($_POST['button-sender']){
-	if(mail("$myemail,$senderemail","$subject - enviado pelo site","$emailmessage")){
-		header("Location:/m/envio-de-email/enviado-com-sucesso.html");
-	}
-	else{
-		header("Location:/m/envio-de-email/erro-ao-enviar.html");
-	}
+$meuEmail="softechtecnologia@gmail.com";
+$nome=$_POST['nome'];
+$remetente=$_POST['email'];
+$assunto=$_POST['assunto'];
+$mensagem=$_POST['mensagem'];
+$mensagemEmail="Este é um contato realizado através da versão \"Mobile\" do site \"http://www.softech.hol.es\", por $nome, com as seguintes informações:\n\nNome: $nome\nE-mail: $remetente\nAssunto: $assunto\n\nMensagem: $mensagem";
+$sucesso="/m/envio-de-email/enviado-com-sucesso.php";
+$erro="/m/envio-de-email/erro-ao-enviar.php";
+if($_SERVER['SERVER_ADDR']=='::1'||$_SERVER['SERVER_ADDR']=='127.0.0.1'){
+	$pathLocal="/site-softech";
+	$sucesso=$pathLocal.$sucesso;
+	$erro=$pathLocal.$erro;
 }
-else{
-	header("Location:/m/envio-de-email/erro-ao-enviar.html");
+if(mail("$meuEmail,$remetente","$assunto - Enviado do site da Softech","$mensagemEmail")){
+	header("Location:".$sucesso);
+}else{
+	header("Location:".$erro);
 }
 ?>
