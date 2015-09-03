@@ -7,11 +7,11 @@ echo '
 	</div>
 	<nav>
 		<ul>
-			<a onclick="location.href=principal"><li class="item">Início</li></a>
-			<a onclick="location.href=sobreNos"><li class="item">Empresa</li></a>
-			<a onclick="location.href=produtosEServicos"><li class="item">Produtos e Serviços</li></a>
-			<a onclick="location.href=downloads" title="Donwloads"><li class="item">Downloads</li></a>
-			<a onclick="location.href=fale"><li class="item">Fale Conosco</li></a>
+			<li onclick="location.href=principal" class="item">Início</li>
+			<li onclick="location.href=sobreNos" class="item">Empresa</li>
+			<li onclick="location.href=produtosEServicos" class="item">Produtos e Serviços</li>
+			<li onclick="location.href=downloads" class="item">Downloads</li>
+			<li onclick="location.href=fale" class="item">Fale Conosco</li>
 		</ul>
 	</nav>
 ';

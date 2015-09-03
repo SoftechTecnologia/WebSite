@@ -5,20 +5,21 @@ function def(){//Página default
 		if(window.location.hostname=="localhost"||window.location.hostname=="127.0.0.1"){
 			path=pathLocal+path;
 		}
+		var errorMsg="Ocorreu um erro ao inicializar o site. É preciso atualizar a página.";
 		$.ajax({
 			url:path,
 			success: function(windows){windows=$(windows).find('.windows');$('.oss').html(windows);},
-			error: function(){alert('Ocorreu um erro ao inicializar o site. É preciso atualizar a página.');location.href="/downloads";}
+			error: function(){alert(errorMsg);location.href="/downloads";}
 		});
 		$.ajax({
 			url:path,
 			success: function(mac){mac=$(mac).find('.mac');$('.oss').append(mac);},
-			error: function(){alert('Ocorreu um erro ao inicializar o site. É preciso atualizar a página.');location.href="/downloads";}
+			error: function(){alert(errorMsg);location.href="/downloads";}
 		});
 		$.ajax({
 			url:path,
 			success: function(linux){linux=$(linux).find('.linux');$('.oss').append(linux);},
-			error: function(){alert('Ocorreu um erro ao inicializar o site. É preciso atualizar a página.');location.href="/downloads";}
+			error: function(){alert(errorMsg);location.href="/downloads";}
 		});
 		$(this)
 		.fadeIn(fdTm)
@@ -81,11 +82,12 @@ function browsers(page){
 	var voltar=voltaIni+linkV+voltaFim;
 	$('.oss')
 	.fadeOut(fdTm, function(){
-		var ff=progIni+"https://goo.gl/UmtZ3Z"+progDown+"Firefox</a>;</p>";
-		var gc=progIni+"http://goo.gl/WGphk6"+progDown+"Google Chrome</a>;</p>";
-		var op=progIni+"http://goo.gl/msTkIb"+progDown+"Opera</a>;</p>";
+		var ff=progIni+"https://goo.gl/UmtZ3Z"+progDown+"Firefox</a></p>";
+		var gc=progIni+"http://goo.gl/WGphk6"+progDown+"Google Chrome</a></p>";
+		var op=progIni+"http://goo.gl/msTkIb"+progDown+"Opera</a></p>";
+		var sf=progIni+"http://goo.gl/4ZLCJa"+progDown+"Safari</a></p>";
 		$(this)
-		.html("<p><h3>Browsers</h3></p>"+voltar+ff+gc+op+voltar)
+		.html("<p><h3>Browsers</h3></p>"+voltar+ff+gc+op+sf+voltar)
 		.fadeIn(fdTm)
 	})
 }
@@ -106,11 +108,12 @@ function SOs(page){
 	var voltar=voltaIni+linkV+voltaFim;
 	$('.oss')
 	.fadeOut(fdTm, function(){
-		var win10=progIni+"#"+progDown+"Windows 10</a>;</p>";
-		var win8=progIni+"#"+progDown+"Windows 8</a>;</p>";
-		var win7=progIni+"#"+progDown+"Windows 7</a>;</p>";
+		var win10=progIni+"https://goo.gl/DxUVyt"+progDown+"Windows 10 Home (32b/64b)</a>;</p>";
+		var win8=progIni+"https://goo.gl/Jv3qj8"+progDown+"Windows 8.1 AIO (32b/64b)</a>;</p>";
+		var win7=progIni+"https://goo.gl/mH5Zs0"+progDown+"Windows 7 AIO (32b/64b)</a>;</p>";
+		var win98se=progIni+"https://goo.gl/xOkTHM"+progDown+"Windows 98 SE</a>;</p>";
 		$(this)
-		.html("<p><h3>Windows</h3></p>"+voltar+win10+win8+win7+voltar)
+		.html("<p><h3>Sistemas Operacionais</h3></p>"+voltar+win10+win8+win7+win98se+voltar)
 		.fadeIn(fdTm)
 	})
 }

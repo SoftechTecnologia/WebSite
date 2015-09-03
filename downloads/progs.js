@@ -28,9 +28,9 @@ var progs=[
 			// Página 4
 			progIni+"http://goo.gl/8udqEp"+progDown+"µTorrent</a>: Cliente BitTorrent;</p>" // 1
 		],[//Mac
-			"- <a href='/fale-conosco.html' class='linkintext'>Diga-nos o que precisa!</a>"
+			"- <a href='"+fale+"' class='linkintext'>Diga-nos o que precisa!</a>"
 		],[//Linux
-			"- <a href='/fale-conosco.html' class='linkintext'>Diga-nos o que precisa!</a>"
+			"- <a href='"+fale+"' class='linkintext'>Diga-nos o que precisa!</a>"
 		]
 	];
 // Páginas
