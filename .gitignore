@@ -1,20 +1,18 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
-
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
+# Files
 *.cab
+css/css.css.map
+*scss
 *.msi
 *.msm
 *.msp
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
+#Folders
 testes-e-outros-sites
+$RECYCLE.BIN/
+css/.sass-cache
 
 # =========================
 # Operating System Files
