@@ -50,8 +50,8 @@ nav {
   color: #BDCBF9;
   background: #5071F4;
   right: 50%;
-  transition: .3s; }
-  .item :hover {
+  transition: 0.3s; }
+  .item:hover {
     transition: .3s;
     color: #5071F4;
     background: #BDCBF9; }
@@ -72,7 +72,7 @@ nav {
     width: 40%;
     margin-top: 50px;
     float: left;
-    transition: .3s; }
+    transition: 0.3s; }
     .corpo .meio .texto p:first-letter {
       margin-left: 40px; }
   .corpo .direita {
@@ -99,8 +99,8 @@ nav {
   color: #0000CD;
   font-weight: bold;
   text-decoration: none;
-  transition: .3s; }
-  .linkintext :hover {
+  transition: 0.3s; }
+  .linkintext:hover {
     color: #9400D3;
     transition: .3s;
     cursor: pointer; }
@@ -124,7 +124,7 @@ footer {
     vertical-align: -33px;
     transition: .3s;
     border-radius: 5px; }
-    footer span :hover {
+    footer span:hover {
       transition: .3s;
       color: #5071F4;
       background: #BDCBF9; }
@@ -141,10 +141,10 @@ footer {
   border-radius: 5px;
   background: #fff;
   cursor: pointer;
-  transition: .3s; }
-  .imgDoeSangue :hover {
+  transition: 0.3s; }
+  .imgDoeSangue:hover {
     box-shadow: 0 0 20px #fff;
-    transition: .3s; }
+    transition: 0.3s; }
 
 .far {
   margin-top: 50px; }
@@ -157,7 +157,7 @@ footer {
   margin-top: 5px;
   cursor: pointer;
   background: #CCC;
-  transition: .3s; }
+  transition: 0.3s; }
 
 textarea {
   resize: none;
@@ -172,15 +172,15 @@ select {
 
 .field, textarea {
   width: 98%; }
-  .field :hover, textarea :hover {
+  .field:hover, textarea:hover {
     box-shadow: 0 0 20px #5071F4;
     background: #DDD;
-    transition: .3s; }
-  .field :focus, textarea :focus {
+    transition: 0.3s; }
+  .field:focus, textarea:focus {
     box-shadow: 0 0 20px #5071F4;
     background: #FFF;
     cursor: default;
-    transition: .3s; }
+    transition: 0.3s; }
 
 .buttonSender {
   font-size: 22pt;
@@ -192,11 +192,11 @@ select {
   background: #5071F4;
   transition: .3s;
   border: none; }
-  .buttonSender :hover {
+  .buttonSender:hover {
     color: #5071F4;
     box-shadow: 0 0 40px #5071F4;
     background: #BDCBF9;
-    transition: .3s; }
+    transition: 0.3s; }
 
 .entrelinha {
   font-size: 8pt;
@@ -212,7 +212,7 @@ h3 {
   border-radius: 20px;
   padding: 10px;
   background: #5071F4;
-  color: #BCDBF4;
+  color: #BDCBF9;
   box-shadow: 0 0 10px #5071F4; }
 
 /*# sourceMappingURL=css.css.map */

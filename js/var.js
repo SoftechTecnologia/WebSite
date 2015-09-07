@@ -1,6 +1,6 @@
 ﻿// Navegação
 var
-pathLocal="/site-softech",
+pathLocal="",
 siteSoftech="http://www.softech.hol.es"
 principal="/",
 sobreNos="/sobre-nos.php",
@@ -11,6 +11,7 @@ doeSangue="/promocoes/campanha-doe-sangue.php",
 mandaMail="/envio-de-email/sendmail.php",
 naoAutorizado="/erro/acesso-nao-autorizado.php";
 if (window.location.hostname=="localhost"||window.location.hostname=="127.0.0.1"){
+	pathLocal="/site-softech";
 	var
 	principal=pathLocal+principal,
 	sobreNos=pathLocal+sobreNos,
