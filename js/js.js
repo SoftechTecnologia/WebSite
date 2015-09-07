@@ -12,8 +12,8 @@
 			alert("A confirmação de email está incorreta!");
 			return false;
 		}
-		var btnText=$(".buttonSender").val();
-		$(".buttonSender").val("Aguarde...");
+		var btnText=$(".buttonSender").html();
+		$(".buttonSender").html("Aguarde...");
 		$.ajax({
 			data:{
 				nome:$(".nome").val(),
@@ -28,7 +28,8 @@
 					type:$(dados).filter(".retorno").attr("data-type"),
 					title:$(dados).filter(".retorno").html()
 				},function(){
-					$(".buttonSender").val(btnText);
+					if($(dados).filter(".retorno").attr("data-type")=="success") $(".formEmail input,.formEmail textarea").val("");
+					$(".buttonSender").html(btnText);
 				})
 			},
 			error:function(jqXHR, textStatus, errorThrown){
@@ -42,7 +43,7 @@
 					cancelButtonText: "Não, tudo bem.",
 					closeOnConfirm: false
 				},function(){
-					$(".buttonSender").val(btnText);
+					$(".buttonSender").html(btnText);
 				});
 			}
 		});

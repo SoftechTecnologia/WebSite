@@ -24,7 +24,7 @@ echo '
 				<textarea rows="5" class="mensagem" placeholder="Digite sua mensagem aqui." required></textarea>
 			</p>
 			<span class="entrelinha">* Todos os campos são obrigatórios.</span><br>
-			<input type="submit" class="buttonSender" value="Enviar E-mail">
+			<button class="buttonSender">Enviar E-mail</button>
 		</form>
 	</fieldset>
 ';
