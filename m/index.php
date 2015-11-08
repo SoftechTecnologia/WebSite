@@ -9,8 +9,8 @@
             if(window.location.hostname=="localhost"||window.location.hostname=="127.0.0.1") path=pathLocal+path;
             $.ajax({
                 url:path,
-                success: function(corpo){corpo=$(corpo).find('div.meio fieldset.texto');$('.meio').html(corpo);},
-                error: function(){alert('Ocorreu um erro ao inicializar o site. É preciso atualizar a página.');}
+                success: function(data){$('.meio').html($(data).find('div.meio fieldset.texto'));},
+                error: function(){alert('Ocorreu um erro ao inicializar o corpo. É preciso atualizar a página.');}
             });
         </script>
     </head>

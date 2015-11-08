@@ -4,21 +4,14 @@ $(document).ready(function (){
 });
 // Componentes
 $(function(){
-    var path="/index.php";
-    if(window.location.hostname=="localhost"||window.location.hostname=="127.0.0.1") path=pathLocal+path;
+    var path=window.location.hostname=="localhost"||window.location.hostname=="127.0.0.1"?pathLocal+"/index.php":"/index.php";
     $.ajax({
         url:path,
-        success: function(topo){topo=$(topo).find('.bg-logo-softech');$('.logo').html(topo);},
-        error: function(){alert('Ocorreu um erro ao inicializar o site. É preciso atualizar a página.');}
-    });
-    $.ajax({
-        url:path,
-        success: function(topo){topo=$(topo).find('nav').children();$('nav.shifter-navigation').html(topo);},
-        error: function(){alert('Ocorreu um erro ao inicializar o site. É preciso atualizar a página.');}
-    });
-    $.ajax({
-        url:path,
-        success: function(rodape){rodape=$(rodape).find('.rodapeText');$('footer').html(rodape);},
+        success: function(data){
+            $('footer').html($(data).find('.rodapeText')); //Rodapé
+            $('nav.shifter-navigation').html($(data).find('nav').children()); //Itens do menu
+            $('.logo').html($(data).find('.bg-logo-softech')); //Topo
+        },
         error: function(){alert('Ocorreu um erro ao inicializar o site. É preciso atualizar a página.');}
     });
 });

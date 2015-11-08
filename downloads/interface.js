@@ -37,20 +37,20 @@ function pegaPag(sys){//Itens da página
     for(var atualProg=0;atualProg<progs[sys].length;numPag++){
         paginas[sys][numPag]="";
         for(var numProg=0;numProg<itPorPag&&atualProg<progs[sys].length;numProg++){
-                paginas[sys][numPag]=paginas[sys][numPag]+progs[sys][atualProg];
-                atualProg++;
+            paginas[sys][numPag]=paginas[sys][numPag]+progs[sys][atualProg];
+            atualProg++;
         }
     }
 }
 function appsWin(page){
-	var linkV="page(0,"+page+")";
-	var voltar=voltaIni+linkV+voltaFim;
-	$('.oss').fadeOut(fdTm, function(){
-            var kF=progIni+"https://goo.gl/JIXKvt"+progDown+"Key Finder</a>: Verificador de Serial Windows;</p>";
-            var pP=progIni+"http://goo.gl/YnWkST"+progDown+"Personalization Panel</a>: Manipulador Windows;</p>";
-            var mbrR=progIni+"http://goo.gl/84Mn55"+progDown+"MBR Regenerator</a>: Verificador de Serial Windows;</p>";
-            $(this).html("<p><h3>Aplicativos Windows</h3></p>"+voltar+kF+pP+mbrR+voltar).fadeIn(fdTm);
-	});
+    var linkV="page(0,"+page+")";
+    var voltar=voltaIni+linkV+voltaFim;
+    $('.oss').fadeOut(fdTm, function(){
+        var kF=progIni+"https://goo.gl/JIXKvt"+progDown+"Key Finder</a>: Verificador de Serial Windows;</p>";
+        var pP=progIni+"http://goo.gl/YnWkST"+progDown+"Personalization Panel</a>: Manipulador Windows;</p>";
+        var mbrR=progIni+"http://goo.gl/84Mn55"+progDown+"MBR Regenerator</a>: Verificador de Serial Windows;</p>";
+        $(this).html("<p><h3>Aplicativos Windows</h3></p>"+voltar+kF+pP+mbrR+voltar).fadeIn(fdTm);
+    });
 }
 function remAcces(page){
     var linkV="page(0,"+page+")";
