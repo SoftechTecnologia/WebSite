@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8" />
+            <meta charset="utf-8" />
 	</head>
 	<body>
 		<?php
@@ -14,14 +14,13 @@
 		$sucesso="/envio-de-email/enviado-com-sucesso.php";
 		$erro="/envio-de-email/erro-ao-enviar.php";
 		if($_SERVER['SERVER_ADDR']=='::1'||$_SERVER['SERVER_ADDR']=='127.0.0.1'){
-			$pathLocal="/site-softech";
-			$sucesso=$pathLocal.$sucesso;
-			$erro=$pathLocal.$erro;
+                    $pathLocal="/site-softech";
+                    $sucesso=$pathLocal.$sucesso;
+                    $erro=$pathLocal.$erro;
 		}
-		if(mail("$meuEmail,$remetente","$assunto - Enviado do site da Softech","$mensagemEmail"))
-			echo "<span class='retorno' data-type='success'>E-mail enviado com sucesso!</span>";
-		else
-			echo "<span class='retorno' data-type='error'>Ocorreu um erro ao enviar!</span>";
+		echo mail("$meuEmail,$remetente","$assunto - Enviado do site da Softech","$mensagemEmail")?
+                    "<span class='retorno' data-type='success'>E-mail enviado com sucesso!</span>":
+                    "<span class='retorno' data-type='error'>Ocorreu um erro ao enviar!</span>";
 		?>
 	</body>
 </html>

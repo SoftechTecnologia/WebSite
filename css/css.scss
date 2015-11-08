@@ -1,0 +1,200 @@
+$mainColor:#5071F4;
+$mainColorHover:#BDCBF9;
+*{outline:none}
+body{
+    margin:0;
+    width:100%; height:100%;
+    color:#444;
+    background:#E2E2E2;
+    overflow-x:hidden
+}
+/* Topo */
+header{width:100%; height:210px}
+.bg-logo-softech{
+    img{
+        top:13px; left:50%;
+        margin-left:-62px;
+        position:absolute
+    }
+    width:100%; height:150px;
+    padding:0px;
+    background:linear-gradient(#BBB -30%,#FFF 40%,#FFF 60%,#BBB 130%);
+    background:-webkit-linear-gradient(#BBB -30%,#FFF 40%,#FFF 60%,#BBB 130%)
+}/* Fim do Topo */
+/* Menu */
+nav{
+    ul{
+        margin:0; padding:0;
+        list-style:none;
+        position:relative;
+        float:left;
+        left:50%
+    }
+    width:100%; height:60px;
+    background:$mainColor !important
+}
+.item{
+    &:hover{
+        transition:.3s;
+        color:$mainColor;
+        background:$mainColorHover
+    }
+    padding:13px 20px;
+    position:relative;
+    cursor:pointer;
+    float:left;
+    font-size:22pt;
+    color:$mainColorHover;
+    background:$mainColor;
+    right:50%;
+    transition:.3s
+}/* Fim do Menu */
+/* Corpo */
+.corpo{
+    .esquerda{
+        width:29%;
+        margin-left:0;
+        margin-top:50px;
+        float:left;
+        text-align:center
+    }
+    .meio{
+        .texto p:first-letter{margin-left:40px}
+        width:40%;
+        margin-top:50px;
+        float:left;
+        transition:.3s
+    }
+    .direita{
+        width:29%;
+        margin-right:0;
+        margin-top:50px;
+        float:left;
+        text-align:center
+    }
+    margin:0; padding:0px;
+    top:210px
+}
+.texto{
+    h1,h2,h3{text-align:center}
+    ul li{margin-bottom:10px}
+    text-align:justify;
+    font-size:14pt;
+    border-radius:20px;
+    margin:0 auto;
+    cursor:default;
+    width:80%
+}
+/* Formas de Contato*/
+.linkintext{
+    &:hover{
+        color:#9400D3;
+        transition:.3s;
+        cursor:pointer
+    }
+    color:#0000CD;
+    font-weight:bold;
+    text-decoration:none;
+    transition:.3s
+}/* Fim de Formas de Contato*//* Fim do Corpo */
+/* Rodapé */
+footer{
+    span{
+        &:hover{
+            transition:.3s;
+            color:$mainColor;
+            background:$mainColorHover
+        }
+        padding:5px;
+        vertical-align:-33px;
+        transition:.3s;
+        border-radius:5px
+    }
+    margin-top:50px;
+    text-align:center;
+    width:100%; height:100px;
+    font-size:24pt;
+    color:$mainColorHover;
+    background:$mainColor;
+    cursor:default;
+    float:left;
+    overflow:hidden
+}/* Fim do Rodapé */
+/**** Classes e divs em geral ****/
+.imgProf{
+    border-radius:10px;
+    width:50%
+}
+.imgDoeSangue{
+    &:hover{
+        box-shadow:0 0 20px #fff;
+        transition:.3s
+    }
+    width:70%;
+    padding:10px;
+    border-radius:5px;
+    background:#fff;
+    cursor:pointer;
+    transition:.3s
+}
+.far{margin-top:50px}
+/* Formulário de E-mail*/
+.field,textarea,select{
+    border-radius:5px;
+    border:none;
+    padding-left:5px;
+    margin-top:5px;
+    cursor:pointer;
+    background:#CCC;
+    transition:.3s
+}
+textarea{
+    resize:none;
+    margin-bottom:0
+}
+select{height:30px; width:98%}
+.field{height:25px}
+.field,textarea{
+    &:hover{
+        box-shadow:0 0 20px $mainColor;
+        background:#DDD;
+        transition:.3s
+    }
+    &:focus{
+        box-shadow:0 0 20px $mainColor;
+        background:#FFF;
+        cursor:default;
+        transition:.3s
+    }
+    width:98%
+}
+.buttonSender{
+    &:hover{
+        color:$mainColor;
+        box-shadow:0 0 40px $mainColor;
+        background:$mainColorHover;
+        transition:.3s
+    }
+    font-size:22pt;
+    padding:20px; width:99%;
+    border-radius:20px;
+    cursor:pointer;
+    color:$mainColorHover;
+    background:$mainColor;
+    transition:.3s;
+    border:none
+}
+.entrelinha{
+    font-size:8pt;
+    color:red;
+    float:left
+}
+.incorrect{box-shadow:0 0 20px #f00 !important;}/* Fim de Formulário de E-mail*/
+h3{
+    text-align:center;
+    border-radius:20px;
+    padding:10px;
+    background:$mainColor;
+    color:$mainColorHover;
+    box-shadow:0 0 10px $mainColor
+}

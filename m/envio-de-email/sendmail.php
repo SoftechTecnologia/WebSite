@@ -8,13 +8,8 @@ $mensagemEmail="Este é um contato realizado através da versão \"Mobile\" do s
 $sucesso="/m/envio-de-email/enviado-com-sucesso.php";
 $erro="/m/envio-de-email/erro-ao-enviar.php";
 if($_SERVER['SERVER_ADDR']=='::1'||$_SERVER['SERVER_ADDR']=='127.0.0.1'){
-	$pathLocal="/site-softech";
-	$sucesso=$pathLocal.$sucesso;
-	$erro=$pathLocal.$erro;
+    $pathLocal="/site-softech";
+    $sucesso=$pathLocal.$sucesso;
+    $erro=$pathLocal.$erro;
 }
-if(mail("$meuEmail,$remetente","$assunto - Enviado do site da Softech","$mensagemEmail")){
-	header("Location:".$sucesso);
-}else{
-	header("Location:".$erro);
-}
-?>
+header("Location:".(mail("$meuEmail,$remetente","$assunto - Enviado do site da Softech","$mensagemEmail")?$sucesso:$erro));

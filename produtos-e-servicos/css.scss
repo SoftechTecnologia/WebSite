@@ -1,0 +1,23 @@
+table{border-radius:20px}
+table,tr,td,th{border:solid thin #666}
+td{width:50%}
+.top{border-radius:20px 20px 0 0}
+.bottom-left{border-radius:0 0 0 20px}
+.bottom-right{border-radius:0 0 20px 0}
+.titulo,.opcoesServicos{text-align:center}
+.titulo{background:#5071f4}
+.opcoesServicos{background:#BDCBF9}
+.servico{
+    &:hover{
+        box-shadow:0 2px 5px #2040C1;
+        color:#BDCBF9;
+        background:#5071F4;
+        transition:.3s
+    }
+    border-radius:5px;
+    padding:5px;
+    text-decoration:none;
+    cursor:pointer;
+    color:#5071F4;
+    transition:.3s
+}

@@ -7,6 +7,6 @@ RewriteCond %{HTTP_REFERER} !^http://(www\.)?google.com.br/.*$ [NC]
 RewriteCond %{HTTP_REFERER} !^http://(www\.)?bing.com/.*$ [NC]
 RewriteCond %{HTTP_REFERER} !^http://(www\.)?yahoo.com/.*$ [NC]
 RewriteRule \.(gif|jpg|png|ico)$ – [F]
-ErrorDocument 404 /erro/pagina-nao-encontrada.html
-ErrorDocument 403 /erro/acesso-nao-autorizado.html
+ErrorDocument 404 /erro/pagina-nao-encontrada.php
+ErrorDocument 403 /erro/acesso-nao-autorizado.php
 RewriteBase /
