@@ -20,11 +20,13 @@ var progs=[
         progIni+"http://goo.gl/rG77Yt"+progDown+"Microsoft Security Essentials</a>: Antivírus da Microsoft (Windows 7);</p>", // 1
         progIni+"https://goo.gl/YWvVRu"+progDown+"Notepad++</a>: Editor de texto avançado;</p>", // 2
         progIni+"https://goo.gl/v988qM"+progDown+"Microsoft Silverlight</a>: Plugin para navegador;</p>", // 3
-        progIni+"https://goo.gl/3tCvk9"+progDown+"Recuva</a>: Recuperador de arquivos;</p>", // 4
-        progIni+"unlocker(2)"+progDown+"Unlocker</a>: Manipulador de arquivos;</p>", // 5 Função
-        progIni+"http://goo.gl/2N6wyO"+progDown+"WebCam Viewer</a>: Software para WebCam;</p>", // 6
+        conjProgIni+"office(2)"+conjProgIr+"Pacotes Office</a>: Manipuladores de documentos de escritório;</p>", //4
+        progIni+"https://goo.gl/3tCvk9"+progDown+"Recuva</a>: Recuperador de arquivos;</p>", // 5
+        conjProgIni+"unlocker(2)"+conjProgIr+"Unlocker</a>: Manipulador de arquivos;</p>", // 6 Função
         // Página 4
-        progIni+"http://goo.gl/8udqEp"+progDown+"µTorrent</a>: Cliente BitTorrent;</p>" // 1
+        progIni+"http://goo.gl/2N6wyO"+progDown+"WebCam Viewer</a>: Software para WebCam;</p>", // 1
+        progIni+"http://goo.gl/8udqEp"+progDown+"µTorrent</a>: Cliente BitTorrent;</p>", // 2
+        conjProgIni+"SOs(3)"+conjProgIr+"SOs Windows</a>: Mídias de instalação;</p>" // 3
     ],[//Mac
         "- <a href='"+fale+"' class='linkintext'>Diga-nos o que precisa!</a>"
     ],[//Linux

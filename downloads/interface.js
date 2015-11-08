@@ -73,6 +73,16 @@ function browsers(page){
         $(this).html("<p><h3>Browsers</h3></p>"+voltar+ff+gc+op+sf+voltar).fadeIn(fdTm);
     });
 }
+function office(page){
+    var linkV="page(0,"+page+")";
+    var voltar=voltaIni+linkV+voltaFim;
+    $('.oss').fadeOut(fdTm, function(){
+        var mo=progIni+"http://goo.gl/LVQ5no"+progDown+"Office 365</a></p>";
+        var lo=progIni+"https://goo.gl/Du5bHq"+progDown+"LibreOffice</a></p>";
+        var gd=progIni+"https://docs.google.com"+progDown+"Google Docs</a></p>";
+        $(this).html("<p><h3>Pacotes Office</h3></p>"+voltar+mo+lo+gd+voltar).fadeIn(fdTm);
+    });
+}
 function unlocker(page){
     var linkV="page(0,"+page+")";
     var voltar=voltaIni+linkV+voltaFim;
@@ -80,7 +90,7 @@ function unlocker(page){
     .fadeOut(fdTm, function(){
         var x86=progIni+"http://goo.gl/0pFYW8"+progDown+"32 bits</a>;</p>";
         var x64=progIni+"http://goo.gl/ITWKPE"+progDown+"64 bits</a>;</p>";
-        $(this).html("<p><h3>Unlocker</h3></p>"+voltar+ff+gc+op+voltar).fadeIn(fdTm);
+        $(this).html("<p><h3>Unlocker</h3></p>"+voltar+x86+x64+voltar).fadeIn(fdTm);
     });
 }
 function SOs(page){
@@ -92,6 +102,6 @@ function SOs(page){
         var win8=progIni+"https://goo.gl/Jv3qj8"+progDown+"Windows 8.1 AIO (32b/64b)</a>;</p>";
         var win7=progIni+"https://goo.gl/mH5Zs0"+progDown+"Windows 7 AIO (32b/64b)</a>;</p>";
         var win98se=progIni+"https://goo.gl/xOkTHM"+progDown+"Windows 98 SE</a>;</p>";
-        $(this).html("<p><h3>Sistemas Operacionais</h3></p>"+voltar+win10+win8+win7+win98se+voltar).fadeIn(fdTm);
+        $(this).html("<p><h3>Mídias de instalação de SO</h3></p>"+voltar+win10+win8+win7+win98se+voltar).fadeIn(fdTm);
     });
 }
